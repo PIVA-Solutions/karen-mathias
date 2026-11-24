@@ -1,0 +1,1696 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://karenmathias.com.br/">
+<title>Karen Mathias Social Media</title>
+<meta name="description" content="Portfólio de Karen Mathias: social media, design e vídeos.">
+<meta name="theme-color" content="#07040d">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Karen Mathias · Portfólio">
+<meta property="og:description" content="Social media, design e vídeos.">
+<meta property="og:url" content="https://karenmathias.com.br/">
+<meta property="og:image" content="https://karenmathias.com.br/img/hero.jpg">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="icon-512.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,400..900,0..100,0..1&family=Syncopate:wght@400;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap">
+<style>
+/* Layout: o portfólio original da Karen (galáxia roxa, nota de papel, títulos retrô), na mesma ordem de seções, com efeitos: céu estrelado vivo, estrelas 3D com parallax, entradas ao rolar, contadores, antes/depois e zoom nas imagens */
+:root{
+  --space:#07040d;
+  --space-2:#120a22;
+  --nebula:#3a1670;
+  --violet:#8e5cff;
+  --lilac:#cdb2ff;
+  --rose:#ff86d6;
+  --white:#f7f3ff;
+  --muted:#b7abd0;
+  --paper:#fbf9ff;
+  --ink:#16101f;
+  --line:rgba(205,178,255,.18);
+  --grad:linear-gradient(95deg,#e7d6ff 0%,#b38cff 45%,#ff8fdc 100%);
+  --retro:"Fraunces",Georgia,serif;
+  --wide:"Syncopate","Arial Black",sans-serif;
+  --serif:"Lora",Georgia,"Times New Roman",serif;
+  --ui:"Plus Jakarta Sans",system-ui,sans-serif;
+  --wrap:1100px;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--space);color:var(--white);font-family:var(--serif);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+button{font:inherit;color:inherit}
+p{margin:0}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:20px}
+:focus-visible{outline:2px solid var(--lilac);outline-offset:3px;border-radius:8px}
+
+/* céu */
+#sky{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+.nebula{position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(60% 45% at 80% 10%,rgba(122,60,220,.35),transparent 70%),radial-gradient(50% 40% at 10% 60%,rgba(90,30,180,.28),transparent 70%),radial-gradient(45% 35% at 70% 95%,rgba(150,70,230,.25),transparent 70%)}
+main,header,footer{position:relative;z-index:1}
+
+/* títulos */
+.retro{font-family:var(--retro);font-weight:800;font-variation-settings:"SOFT" 100,"WONK" 1,"opsz" 144;line-height:1;letter-spacing:-.01em;margin:0;text-wrap:balance}
+h2.retro{font-size:clamp(2.6rem,7vw,4.6rem)}
+.sub{font-family:var(--serif);font-style:italic;font-size:clamp(1.3rem,3vw,1.8rem);color:var(--lilac);margin-top:6px}
+.grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{color:var(--muted);max-width:60ch}
+section{padding-block:clamp(70px,10vw,120px);position:relative;overflow:hidden;overflow:clip}
+.sparkle{display:inline-block;color:var(--lilac);animation:twinkle 2.6s ease-in-out infinite}
+@keyframes twinkle{0%,100%{transform:scale(1) rotate(0);opacity:1}50%{transform:scale(1.3) rotate(25deg);opacity:.7}}
+
+/* botões */
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border-radius:999px;font:700 .95rem var(--ui);text-decoration:none;border:0;cursor:pointer;color:var(--ink);background:var(--grad);box-shadow:0 10px 30px -8px rgba(179,140,255,.7);transition:transform .2s,box-shadow .25s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 16px 40px -8px rgba(179,140,255,.9)}
+.btn.ghost{background:rgba(255,255,255,.06);color:var(--white);border:1px solid var(--line);box-shadow:none}
+.btn.ghost:hover{border-color:var(--lilac)}
+/* .pulse: brilho em ::after com box-shadow fixo; só a opacity anima (composta na GPU). Base = início do antigo glow, ::after = meio dele */
+.pulse,.pulse:hover{position:relative;box-shadow:0 10px 30px -8px rgba(179,140,255,.6)}
+.pulse::after{content:"";position:absolute;inset:0;border-radius:inherit;box-shadow:0 10px 46px -2px rgba(255,143,220,.85);opacity:0;pointer-events:none;animation:glow 2.6s ease-in-out infinite}
+@keyframes glow{0%,100%{opacity:0}50%{opacity:1}}
+.btn .arrow{transition:transform .2s}
+.btn:hover .arrow{transform:translateX(4px)}
+
+/* progresso + nav */
+.progress{position:fixed;top:0;left:0;height:3px;width:0;z-index:60;background:var(--grad)}
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:rgba(7,4,13,.7);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px}
+.brand{font:700 .9rem var(--wide);letter-spacing:.12em;text-decoration:none;white-space:nowrap}
+.nav-links{display:flex;gap:26px;font:500 .9rem var(--ui)}
+.nav-links a{text-decoration:none;color:var(--muted);transition:color .2s}
+.nav-links a:hover{color:var(--white)}
+.nav .btn{padding:9px 18px;font-size:.85rem}
+@media (max-width:900px){.nav-links{display:none}}
+
+/* estrelas 3D com parallax */
+.star3d{position:absolute;z-index:0;pointer-events:none;width:var(--s,60px);height:var(--s,60px);will-change:transform}
+.star3d i{display:block;width:100%;height:100%;clip-path:polygon(50% 0,61% 39%,100% 50%,61% 61%,50% 100%,39% 61%,0 50%,39% 39%);background:radial-gradient(circle at 38% 32%,#fff 0%,#eadcff 14%,#b48bff 42%,#6a33d6 72%,#2b0f66 100%);animation:spin 8s ease-in-out infinite}
+.star3d::after{content:"";position:absolute;inset:-30%;background:radial-gradient(closest-side,rgba(190,150,255,.45),transparent);z-index:-1}
+.star3d.pink i{background:radial-gradient(circle at 38% 32%,#fff 0%,#ffe0f4 14%,#ff9be0 42%,#c93fa8 72%,#5a0f4f 100%)}
+@keyframes spin{0%,100%{transform:rotate(-12deg) scale(1)}50%{transform:rotate(12deg) scale(1.08)}}
+
+/* HERO: PORTFÓLIO */
+.hero{padding-top:clamp(40px,7vw,80px);text-align:center}
+.hero .wrap{position:relative;z-index:1;display:grid;justify-items:center;gap:20px}
+.word{font:400 clamp(2.4rem,10.5vw,8.2rem) var(--wide);letter-spacing:.06em;line-height:1;margin:0;color:var(--white);white-space:nowrap;text-shadow:0 0 40px rgba(179,140,255,.45)}
+.word span{display:inline-block;animation:drop .8s cubic-bezier(.2,1.2,.3,1) both}
+@keyframes drop{from{transform:translateY(-40px);opacity:0;filter:blur(8px)}to{transform:none;opacity:1;filter:none}}
+.hero-photo{position:relative;width:min(100%,980px);padding:2px;border-radius:30px;margin-top:4px;box-shadow:0 40px 90px -30px rgba(142,92,255,.75);overflow:hidden}
+/* borda animada: quadrado com gradiente cônico maior que a diagonal da moldura, girando por transform; o overflow da moldura recorta nos 2px de borda */
+.hero-photo::before{content:"";position:absolute;left:50%;top:50%;width:122%;aspect-ratio:1;background:conic-gradient(from 0deg,#b48bff,#ff8fdc,#6a33d6,#cdb2ff,#b48bff);transform:translate(-50%,-50%);animation:flow 7s linear infinite}
+@keyframes flow{from{transform:translate(-50%,-50%) rotate(0)}to{transform:translate(-50%,-50%) rotate(360deg)}}
+.hero-photo .frame{position:relative;border-radius:28px;overflow:hidden;aspect-ratio:16/10;background:#e9e6e3}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 40%;transform:scale(1.06);will-change:transform}
+.hero-meta{width:min(100%,980px);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:14px 24px}
+.roles{display:flex;gap:10px 22px;flex-wrap:wrap;font:italic 500 clamp(1.1rem,2.4vw,1.5rem) var(--serif);color:var(--lilac)}
+.roles span+span::before{content:"✦";margin-right:22px;font-style:normal;font-size:.7em;vertical-align:middle;color:var(--rose)}
+.socials{display:flex;flex-wrap:wrap;gap:8px 20px;text-align:left;font:italic 1rem var(--serif)}
+.socials a,.socials span{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--white)}
+.socials button{display:flex;align-items:center;gap:8px;background:none;border:0;padding:0;font:inherit;color:var(--white);cursor:copy}
+.socials a:hover,.socials button:hover{color:var(--lilac)}
+.socials i{font-style:normal;width:24px;height:24px;border-radius:7px;background:rgba(255,255,255,.12);display:grid;place-items:center;font-size:.8rem}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:10px}
+@media (max-width:700px){
+  .hero-photo .frame{aspect-ratio:4/5}
+  .hero-photo::before{width:165%}
+  .hero-photo img{object-position:50% 30%}
+  .hero-meta{flex-direction:column;justify-content:center}
+  .roles,.socials{justify-content:center}
+}
+
+/* SOBRE MIM: nota de papel */
+.about{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.about>*{min-width:0}
+.about h2{margin-bottom:28px}
+.note{position:relative;background:var(--paper);color:var(--ink);padding:34px 30px 30px;border-radius:4px;transform:rotate(-1.6deg);box-shadow:0 30px 60px -20px rgba(0,0,0,.7),12px 12px 0 rgba(142,92,255,.35);transition:transform .4s}
+.note:hover{transform:rotate(0)}
+.note::before{content:"";position:absolute;top:-16px;right:36px;width:22px;height:54px;border:3px solid #b9b3c6;border-radius:12px;border-bottom-color:transparent;transform:rotate(12deg)}
+.note .corner-star{position:absolute;right:-18px;bottom:-22px;font-size:2.6rem;color:var(--white);text-shadow:0 0 20px var(--violet);animation:twinkle 3s ease-in-out infinite}
+.note p{font-size:1.05rem;line-height:1.7}
+.note p+p{margin-top:12px}
+.note b{font-weight:600}
+.circle{position:relative;width:min(100%,340px);aspect-ratio:1;justify-self:center}
+.circle img{width:100%;height:100%;object-fit:cover;border-radius:50%;box-shadow:0 0 0 2px rgba(205,178,255,.4),0 0 60px rgba(142,92,255,.55)}
+@media (max-width:820px){.about{grid-template-columns:1fr}.circle{width:min(70%,280px)}}
+
+/* CERTIFICADOS */
+.cert{display:grid;grid-template-columns:.8fr 1.2fr;gap:44px;align-items:center}
+.cert>*{min-width:0}
+.cert-photo{border-radius:22px;overflow:hidden;box-shadow:0 30px 60px -20px rgba(0,0,0,.7);max-width:380px}
+.cert-photo img{aspect-ratio:4/5;width:100%;object-fit:cover;object-position:50% 70%}
+.cert-copy{display:grid;gap:22px}
+.cert-copy h2 .sparkle{font-size:.6em;vertical-align:top}
+.zoom{position:relative;display:block;width:100%;border:0;padding:0;background:none;cursor:zoom-in;border-radius:16px;overflow:hidden}
+.zoom img{width:100%;transition:transform .5s}
+.zoom:hover img{transform:scale(1.04)}
+.zoom::after{content:"⤢ ampliar";position:absolute;right:10px;bottom:10px;font:600 .72rem var(--ui);padding:4px 10px;border-radius:999px;background:rgba(7,4,13,.75);color:var(--white);opacity:0;transition:opacity .25s}
+.zoom:hover::after{opacity:1}
+@media (max-width:820px){.cert{grid-template-columns:1fr}.cert-photo{width:min(80%,340px);margin-inline:auto}}
+
+/* SKILLS */
+.skills-head{display:flex;justify-content:center;margin-bottom:44px}
+.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.group{background:rgba(18,10,34,.7);border:1px solid var(--line);border-radius:22px;padding:24px;display:grid;gap:14px;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.group h3{margin:0;font:italic 500 1.35rem var(--serif);color:var(--lilac)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{font:600 .85rem var(--ui);padding:8px 14px;border-radius:12px;background:rgba(255,255,255,.06);border:1px solid var(--line);transition:transform .2s,background .2s,border-color .2s,box-shadow .2s}
+.chips span:hover{transform:translateY(-3px);background:rgba(142,92,255,.25);border-color:var(--lilac);box-shadow:0 10px 24px -10px rgba(142,92,255,.8)}
+.special{grid-column:1/-1;display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:center}
+.special ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px 22px}
+.special li{font:italic 1.05rem var(--serif)}
+.special li::before{content:"✦ ";color:var(--lilac)}
+@media (max-width:760px){.skills{grid-template-columns:1fr}.special{grid-template-columns:1fr}}
+
+/* PRIMEIRO TRABALHO */
+.first{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center}
+.first>*{min-width:0}
+.first-copy{display:grid;gap:20px}
+.client-tag{font:600 .8rem var(--ui);letter-spacing:.12em;text-transform:uppercase;color:var(--lilac)}
+.counter{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.counter div{display:grid}
+.counter b{font:800 clamp(2.4rem,6vw,3.6rem)/1 var(--retro);font-variation-settings:"SOFT" 100,"WONK" 1;font-variant-numeric:tabular-nums}
+.counter small{font:500 .82rem var(--ui);color:var(--muted)}
+.counter .to{font-size:2rem;color:var(--lilac)}
+.compare-wrap{display:grid;gap:12px}
+.compare{position:relative;aspect-ratio:265/380;width:100%;max-width:400px;margin-inline:auto;border-radius:18px;overflow:hidden;background:#000;border:1px solid var(--line);box-shadow:0 40px 80px -30px rgba(142,92,255,.7);touch-action:pan-y}
+.compare img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.compare .after{clip-path:inset(0 0 0 var(--pos,50%))}
+.compare .handle{position:absolute;top:0;bottom:0;left:var(--pos,50%);width:2px;background:#fff;transform:translateX(-50%);pointer-events:none}
+.compare .handle::after{content:"⟷";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:50px;height:50px;border-radius:50%;background:var(--grad);color:var(--ink);display:grid;place-items:center;font-weight:800;box-shadow:0 0 0 8px rgba(179,140,255,.22),0 10px 30px rgba(142,92,255,.7)}
+.compare .tag{position:absolute;top:12px;padding:4px 11px;border-radius:999px;font:700 .72rem var(--ui);background:rgba(7,4,13,.8);color:#fff;pointer-events:none}
+.compare .tag.l{left:12px}
+.compare .tag.r{right:12px;background:var(--lilac);color:var(--ink)}
+.compare input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
+.hint{text-align:center;font:500 .8rem var(--ui);color:var(--muted)}
+@media (max-width:860px){.first{grid-template-columns:1fr}}
+
+/* TIPOGRAFIA */
+.type-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:22px;align-items:start;margin-top:36px}
+.type-grid>*{min-width:0}
+.type-side{display:grid;gap:22px}
+.type-block{display:grid;gap:10px}
+.type-block .sub{margin:0}
+.type-block p{color:var(--muted);font-size:.98rem}
+.sample{font-family:"Fraunces",serif;font-size:1.5rem}
+@media (max-width:820px){.type-grid{grid-template-columns:1fr}}
+
+/* CORES */
+.colors{display:flex;flex-wrap:wrap;justify-content:center;gap:16px;margin-top:40px}
+.dot{width:clamp(150px,19vw,190px);aspect-ratio:1;border-radius:50%;display:grid;place-content:center;text-align:center;padding:20px;color:#fff;box-shadow:inset 0 -10px 30px rgba(0,0,0,.25),0 20px 40px -14px rgba(0,0,0,.7);transition:transform .35s cubic-bezier(.2,1.4,.4,1);cursor:default}
+.dot:hover{transform:scale(1.08) rotate(-3deg)}
+.dot b{font:600 .95rem var(--ui);text-decoration:underline;text-underline-offset:3px}
+.dot span{font-size:.8rem;line-height:1.35;margin-top:6px}
+/* círculos sempre redondos: o texto escala com o tamanho do círculo (cqi) em vez de esticar a altura */
+@supports (width:1cqi){
+.dot{flex:none;overflow:hidden;padding:0;container-type:inline-size}
+.dot b,.dot span{max-width:76cqi;justify-self:center}
+.dot b{font-size:8cqi;text-underline-offset:1.6cqi}
+.dot span{font-size:6.7cqi;margin-top:3cqi}
+}
+@media (max-width:600px){.dot{width:min(190px,calc((100% - 16px)/2))}}
+.dot.gold{color:#2a1a00}
+.colors.pre .dot{opacity:0;transform:scale(.6)}
+.colors.in .dot{transition:opacity .6s cubic-bezier(.2,1.4,.4,1),transform .6s cubic-bezier(.2,1.4,.4,1)}
+.colors.in .dot:nth-child(2){transition-delay:.1s}.colors.in .dot:nth-child(3){transition-delay:.2s}.colors.in .dot:nth-child(4){transition-delay:.3s}.colors.in .dot:nth-child(5){transition-delay:.4s}
+
+/* LOGO E IMAGENS + INSTAGRAM */
+.duo{display:grid;grid-template-columns:.75fr 1.25fr;gap:22px;margin-top:36px;align-items:start}
+.duo>*{min-width:0}
+.stack{display:grid;gap:22px}
+.caption{font:italic .95rem var(--serif);color:var(--muted);margin-top:8px}
+@media (max-width:820px){.duo{grid-template-columns:1fr}}
+
+/* CASES */
+.case{display:grid;grid-template-columns:auto 1fr;gap:12px 28px;align-items:start;margin-top:64px}
+.case:first-of-type{margin-top:0}
+.case .num{font:800 clamp(2.6rem,6vw,3.8rem)/1 var(--retro);font-variation-settings:"SOFT" 100,"WONK" 1;white-space:nowrap}
+.case-info{display:grid;gap:8px;padding-top:6px}
+.case-info h3{margin:0;font:600 1.25rem var(--serif)}
+.case-info h3 span{color:var(--lilac);font-weight:400}
+.case-info ul{margin:0;padding-left:20px;display:grid;gap:3px;color:var(--muted)}
+.case-info li::marker{color:var(--lilac)}
+.case .zoom{grid-column:1/-1;justify-self:center;width:min(100%,860px);margin-top:18px;border:1px solid var(--line);box-shadow:0 30px 60px -24px rgba(0,0,0,.7)} /* centralizado e menor, na escala dos palcos dos cases */
+@media (max-width:640px){.case{grid-template-columns:1fr}}
+
+/* OBRIGADA */
+.thanks{text-align:center;padding-block:clamp(90px,14vw,170px)}
+.thanks .wrap{display:grid;justify-items:center;gap:22px;position:relative;z-index:1}
+.thanks h2{font-size:clamp(3.4rem,12vw,8rem)}
+.thanks h2 span{display:block}
+.thanks h2 .grad{padding-bottom:.16em;margin-bottom:-.16em} /* o degradê pinta também a perna do "g" (antes cortava) sem mudar o espaçamento */
+.social-row{display:flex;gap:16px;justify-content:center;margin-top:6px}
+.social-row a{width:58px;height:58px;border-radius:50%;display:grid;place-items:center;font-size:1.5rem;color:var(--white);text-decoration:none;background:rgba(255,255,255,.07);border:1px solid var(--line);transition:transform .25s cubic-bezier(.2,1.4,.4,1),background .25s,border-color .25s,box-shadow .25s}
+.social-row a:hover{transform:translateY(-5px) scale(1.06);background:rgba(142,92,255,.28);border-color:var(--lilac);box-shadow:0 14px 30px -10px rgba(142,92,255,.9)}
+.social-row.pre a{opacity:0;transform:scale(.6)}
+.social-row.in a{transition:opacity .6s cubic-bezier(.2,1.4,.4,1),transform .6s cubic-bezier(.2,1.4,.4,1)}
+.social-row.in a:nth-child(2){transition-delay:.1s}.social-row.in a:nth-child(3){transition-delay:.2s}
+
+footer{padding-block:28px 120px;border-top:1px solid var(--line);font:500 .82rem var(--ui);color:var(--muted)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:90;background:rgba(5,2,10,.88);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);display:grid;place-items:center;padding:24px;opacity:0;visibility:hidden;transition:opacity .25s,visibility .25s;cursor:zoom-out}
+.lb.on{opacity:1;visibility:visible}
+.lb img{max-height:86vh;max-width:min(1000px,100%);border-radius:14px;box-shadow:0 30px 80px rgba(0,0,0,.8);transform:scale(.94);transition:transform .3s}
+.lb.on img{transform:none}
+.lb button{position:absolute;top:calc(16px + env(safe-area-inset-top,0px));right:16px;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:rgba(255,255,255,.08);color:#fff;font-size:1.3rem;cursor:pointer}
+
+.toast{position:fixed;left:50%;bottom:calc(96px + env(safe-area-inset-bottom,0px));transform:translate(-50%,16px);opacity:0;background:var(--white);color:var(--ink);border-radius:999px;padding:10px 18px;font:700 .9rem var(--ui);box-shadow:0 14px 30px rgba(0,0,0,.5);z-index:95;transition:opacity .25s,transform .25s;pointer-events:none}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+
+.wa-float{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:55;width:60px;height:60px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;font-size:2rem;text-decoration:none;box-shadow:0 14px 30px -8px rgba(37,211,102,.6),0 6px 16px rgba(0,0,0,.4);transition:transform .25s cubic-bezier(.2,1.4,.4,1);animation:waIn .6s 1.2s cubic-bezier(.2,1.4,.4,1) both}
+.wa-float:hover{transform:scale(1.08)}
+.wa-float::before{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid #25d366;animation:waRing 2.4s ease-out infinite}
+.wa-float .tip{position:absolute;right:72px;top:50%;transform:translateY(-50%);white-space:nowrap;background:var(--white);color:var(--ink);font:600 .85rem var(--ui);padding:8px 14px;border-radius:999px;box-shadow:0 10px 24px rgba(0,0,0,.4);opacity:0;pointer-events:none;transition:opacity .2s}
+.wa-float:hover .tip{opacity:1}
+@keyframes waRing{0%{transform:scale(1);opacity:.8}100%{transform:scale(1.6);opacity:0}}
+@keyframes waIn{from{transform:scale(0);opacity:0}to{transform:none;opacity:1}}
+@media (hover:none){.wa-float .tip{display:none}}
+/* Entradas: só o que começa ABAIXO da primeira tela recebe .pre (marcado pelo JS). Ao entrar na tela, .pre -> .in por
+   transição (não keyframe): nada que já está visível pula, apaga ou reinicia. Sem JS ou com reduced-motion, nada recebe .pre. */
+.reveal.pre,.stagger.pre>*{opacity:0;transform:translateY(26px)}
+.reveal.in{transition:opacity .8s cubic-bezier(.2,.8,.2,1),transform .8s cubic-bezier(.2,.8,.2,1)}
+.stagger.in>*{transition:opacity .6s cubic-bezier(.2,.8,.2,1),transform .6s cubic-bezier(.2,.8,.2,1)}
+.stagger.in>*:nth-child(2){transition-delay:.1s}.stagger.in>*:nth-child(3){transition-delay:.2s}.stagger.in>*:nth-child(4){transition-delay:.3s}.stagger.in>*:nth-child(5){transition-delay:.4s}
+/* animações infinitas decorativas pausadas enquanto o elemento está fora da tela (classe posta pelo JS) */
+.loop-off,.loop-off::before,.loop-off::after,.loop-off i{animation-play-state:paused!important}
+/* ?perf=noloop: todas as animações infinitas decorativas paradas */
+.perf-noloop .pulse::after,.perf-noloop .hero-photo::before,.perf-noloop .star3d i,.perf-noloop .sparkle,.perf-noloop .corner-star,.perf-noloop .wa-float::before{animation:none!important}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+<style id="case1-carousel-css">
+/* Case 1 · carrossel de celulares sobrepostos */
+.phone-stage{grid-column:1/-1;position:relative;overflow:hidden;padding-top:10px;--pw:clamp(250px,28vw,320px);outline:none}
+.phone-stage:focus-visible{outline:2px solid var(--lilac);outline-offset:6px;border-radius:24px}
+.phone-stage::before{content:"";position:absolute;left:50%;top:46%;width:min(620px,90%);aspect-ratio:1.5;transform:translate(-50%,-50%);background:radial-gradient(closest-side,rgba(142,92,255,.38),transparent);pointer-events:none}
+.phone-track{position:relative;height:calc(var(--pw) * 2.006 + 48px);touch-action:pan-y;user-select:none;-webkit-user-select:none;cursor:grab}
+.phone-track.dragging{cursor:grabbing}
+.phone-slide{position:absolute;left:50%;top:24px;width:var(--pw);aspect-ratio:558/1119;margin:0 0 0 calc(var(--pw) / -2);z-index:var(--z,1);opacity:var(--o,0);transform:translateX(var(--x,0px)) scale(var(--s,.6));transition:transform .8s cubic-bezier(.22,1,.36,1),opacity .55s ease;will-change:transform;cursor:pointer}
+/* sem CSS filter (Safari iOS perde a decodificação por hardware do <video> sob filter): escurecimento e sombra em pseudo-elementos com a forma da moldura (área opaca 3px para dentro, raio 80px na arte de 558×1119) */
+.phone-slide::before,.phone-slide::after{content:"";position:absolute;inset:.2681% .5376%;border-radius:14.49%/7.188%;pointer-events:none}
+.phone-slide::before{z-index:-1;box-shadow:0 28px 34px rgba(0,0,0,.65)}
+.phone-slide::after{background:#000;opacity:calc(1 - var(--b,1));transition:opacity .6s ease}
+.phone-slide img,.phone-slide video{display:block;width:100%;height:100%;object-fit:contain;pointer-events:none;-webkit-user-drag:none}
+.phone-slide.is-active{cursor:zoom-in}
+.phone-ctrl{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:6px;position:relative}
+.phone-nav{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:rgba(255,255,255,.06);color:var(--white);font:600 1rem var(--ui);cursor:pointer;transition:background .2s,border-color .2s,transform .2s}
+.phone-nav:hover{background:rgba(142,92,255,.28);border-color:var(--lilac)}
+.phone-nav:active{transform:scale(.94)}
+.phone-dots{display:flex;gap:8px}
+.phone-dots button{width:8px;height:8px;padding:0;border:0;border-radius:999px;background:rgba(255,255,255,.28);cursor:pointer;transition:width .4s cubic-bezier(.22,1,.36,1),background .3s}
+.phone-dots button[aria-current="true"]{width:26px;background:var(--lilac)}
+.phone-hint{text-align:center;font:italic .9rem var(--serif);color:var(--muted);margin-top:10px}
+@media (max-width:640px){.phone-stage{--pw:min(70vw,285px)}}
+@media (prefers-reduced-motion:reduce){.phone-slide,.phone-slide::after{transition-duration:.01s!important}}
+</style>
+<style id="case1-video-css">
+/* Case 1 · vídeo encaixado na tela do celular: retângulo (27,128)–(528,1021) sobre a arte de 558×1119 */
+.phone-slide .phone-vid{position:absolute;left:4.8387%;top:11.4388%;width:89.7849%;height:79.8034%;border-radius:1.1976%/.6719%;object-fit:cover;display:block;pointer-events:none;background:transparent}
+</style>
+<style id="case1-zoom-css">
+/* Case 1 · zoom navegável dos celulares (componente próprio, no visual do zoom dos Cases 2 e 3; o #lb não muda) */
+.c1-zoom{position:fixed;inset:0;z-index:91;background:rgba(5,2,10,.92);opacity:0;visibility:hidden;transition:opacity .25s,visibility .25s;overflow:hidden}
+.c1-zoom.on{opacity:1;visibility:visible}
+.c1-zoom-strip{position:absolute;inset:0;display:flex;touch-action:none;cursor:grab;will-change:transform;transition:transform .32s cubic-bezier(.22,1,.36,1)}
+.c1-zoom-strip.dragging{transition:none;cursor:grabbing}
+.c1-zoom-item{flex:0 0 100%;display:grid;grid-template:minmax(0,1fr) / minmax(0,1fr);place-items:center;padding:calc(64px + env(safe-area-inset-top,0px)) 16px calc(52px + env(safe-area-inset-bottom,0px));min-width:0}
+/* celular grande: cabe na altura livre (tela − 116 px das margens), sem distorcer */
+.c1-zoom-phone{position:relative;width:min(100%,520px,calc((100vh - 116px - env(safe-area-inset-top,0px) - env(safe-area-inset-bottom,0px)) * 558 / 1119));aspect-ratio:558/1119;cursor:default}
+@supports (height:100dvh){.c1-zoom-phone{width:min(100%,520px,calc((100dvh - 116px - env(safe-area-inset-top,0px) - env(safe-area-inset-bottom,0px)) * 558 / 1119))}}
+.c1-zoom-phone::before{content:"";position:absolute;inset:.2681% .5376%;border-radius:14.49%/7.188%;z-index:-1;box-shadow:0 30px 80px rgba(0,0,0,.8);pointer-events:none}
+.c1-zoom-phone img{display:block;width:100%;height:100%;object-fit:contain;-webkit-user-drag:none;user-select:none;pointer-events:none}
+/* vídeo encaixado na tela do celular: mesmas porcentagens de .phone-vid */
+.c1-zoom-vid{position:absolute;left:4.8387%;top:11.4388%;width:89.7849%;height:79.8034%;border-radius:1.1976%/.6719%;object-fit:cover;display:block;pointer-events:none;background:transparent}
+.c1-zoom-close{position:absolute;top:calc(16px + env(safe-area-inset-top,0px));right:16px;z-index:3;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:rgba(255,255,255,.08);color:#fff;font-size:1.3rem;cursor:pointer}
+.c1-zoom-arrow{position:absolute;top:50%;z-index:3;width:44px;height:44px;margin-top:-22px;border-radius:50%;border:0;background:rgba(255,255,255,.85);color:#262626;font:600 1.6rem/1 var(--ui);cursor:pointer;box-shadow:0 0 8px rgba(0,0,0,.35)}
+.c1-zoom-arrow.prev{left:16px}.c1-zoom-arrow.next{right:16px}
+.c1-zoom-count{position:absolute;top:calc(24px + env(safe-area-inset-top,0px));left:50%;transform:translateX(-50%);z-index:3;color:rgba(255,255,255,.75);font:600 .8rem var(--ui);font-variant-numeric:tabular-nums;pointer-events:none}
+.c1-zoom-dots{position:absolute;left:0;right:0;bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:3;display:flex;justify-content:center;gap:6px;pointer-events:none}
+.c1-zoom-dots i{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.35)}
+.c1-zoom-dots i.on{background:#0095f6}
+@media (hover:none){.c1-zoom-arrow,.c1-zoom-count{display:none}} /* no celular: arraste e pontinhos */
+@media (prefers-reduced-motion:reduce){.c1-zoom,.c1-zoom-strip{transition:none}}
+</style>
+<style id="mutti-polpa-css">
+/* Mutti · vídeo da Polpa (mesmo visual dos .zoom). O toque abre o vídeo ampliado TOCANDO, como no Case 1 (não o #lb de imagem parada) */
+.polpa-btn{position:relative;display:block;border:0;padding:0;background:none;cursor:zoom-in;border-radius:8px;overflow:hidden}
+.polpa-btn::after{content:"⤢ ampliar";position:absolute;right:10px;bottom:10px;font:600 .72rem var(--ui);padding:4px 10px;border-radius:999px;background:rgba(7,4,13,.75);color:var(--white);opacity:0;transition:opacity .25s}
+.polpa-btn:hover::after{opacity:1}
+.polpa-btn video.mutti-polpa{display:block;width:100%;height:auto;transition:transform .5s}
+.polpa-btn:hover video.mutti-polpa{transform:scale(1.04)}
+.polpa-zoom{position:fixed;inset:0;z-index:91;background:rgba(5,2,10,.92);opacity:0;visibility:hidden;transition:opacity .25s,visibility .25s;display:grid;place-items:center;padding:calc(64px + env(safe-area-inset-top,0px)) 16px calc(52px + env(safe-area-inset-bottom,0px))}
+.polpa-zoom.on{opacity:1;visibility:visible}
+.polpa-zoom-vid{display:block;width:min(100%,520px,calc((100vh - 116px - env(safe-area-inset-top,0px) - env(safe-area-inset-bottom,0px)) * 720 / 1280));aspect-ratio:720/1280;height:auto;border-radius:10px;box-shadow:0 30px 80px rgba(0,0,0,.8);background:#000;object-fit:cover}
+@supports (height:100dvh){.polpa-zoom-vid{width:min(100%,520px,calc((100dvh - 116px - env(safe-area-inset-top,0px) - env(safe-area-inset-bottom,0px)) * 720 / 1280))}}
+.polpa-zoom-close{position:absolute;top:calc(16px + env(safe-area-inset-top,0px));right:16px;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:rgba(255,255,255,.08);color:#fff;font-size:1.3rem;cursor:pointer}
+@media (prefers-reduced-motion:reduce){.polpa-zoom{transition:none}}
+</style>
+<style id="mutti-ref-css">
+/* Mutti · seções refeitas como nos prints de referência da Karen (Tipografia, Cores, Logo e Imagens, Instagram) */
+.mt .mt-lead{margin-top:14px}
+.mt .mt-sub{margin-top:56px}
+.mt-row{display:flex;align-items:flex-start;gap:18px;margin-top:30px}
+.mt-row>.mt-item{flex:var(--a,1) 1 0;min-width:0;border-radius:6px;box-shadow:0 0 0 2px rgba(255,255,255,.9),0 24px 50px -20px rgba(0,0,0,.8)}
+.mt-row>.mt-item img{display:block;width:100%;height:auto}
+.mt-arrow{flex:none;width:clamp(56px,7vw,96px);height:auto;min-width:0;aspect-ratio:130/64;align-self:flex-end;margin:0 -6px 6%;overflow:visible;fill:none;stroke:#fff;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 2px 6px rgba(0,0,0,.6))}
+.mt-insta{align-items:center}
+.mt-insta .mt-arrow{align-self:center;margin-bottom:0}
+.mt-row>.mt-phone{box-shadow:none;border-radius:0;overflow:visible;background:none}
+.mt-row>.mt-phone img{filter:drop-shadow(0 24px 40px rgba(0,0,0,.7))}
+.mt-produtos{margin-top:30px;max-width:1100px;border-radius:12px}
+.mt-produtos img{display:block;width:100%;height:auto}
+/* Cores: grupo de círculos + vídeo da Polpa ao lado */
+.mt-cores{display:grid;grid-template-columns:auto auto;justify-content:center;align-items:center;gap:clamp(24px,4vw,56px);margin-top:36px}
+.mt-cores .colors{margin-top:0}
+.mt-polpa{width:var(--pv,260px);border-radius:8px}
+.dot .hex{display:block;font:700 9cqi var(--ui);font-style:normal;letter-spacing:.02em;margin-bottom:2.5cqi;justify-self:center}
+@media (min-width:821px){
+  .mt-cores{--D:clamp(170px,16vw,230px);--pv:calc(var(--D) * 1.84 * .5625)}
+  .mt-cores .colors{position:relative;display:block;width:calc(var(--D) * 2.96);height:calc(var(--D) * 1.84)}
+  .mt-cores .dot{position:absolute;width:var(--D);box-shadow:0 0 0 2px rgba(255,255,255,.9),inset 0 -10px 30px rgba(0,0,0,.25),0 20px 40px -14px rgba(0,0,0,.7)}
+  .mt-cores .dot:nth-child(1){left:0;top:0;z-index:2}
+  .mt-cores .dot:nth-child(2){left:calc(var(--D) * .98);top:0;z-index:2}
+  .mt-cores .dot:nth-child(3){left:calc(var(--D) * 1.96);top:0;z-index:2}
+  .mt-cores .dot:nth-child(4){left:calc(var(--D) * .49);top:calc(var(--D) * .84);z-index:1}
+  .mt-cores .dot:nth-child(5){left:calc(var(--D) * 1.47);top:calc(var(--D) * .84);z-index:1}
+  .mutti-pano{display:none}
+}
+@media (max-width:820px){
+  .mt-row{display:none}                                   /* no celular as fileiras viram o carrossel dos Cases 2/3 */
+  .mutti-pano{margin-top:22px}
+  .mutti-pano .pano-track{height:min(calc((100vw - 32px) * .98), 430px)}
+  .mt-insta-pano .pano-track{height:min(calc((100vw - 32px) * 1.5), 620px)}
+  .mt-insta-pano .pano-slide img{aspect-ratio:600/1067;object-fit:contain}
+  .mt-insta-pano .pano-slide.is-phone{background:none;box-shadow:none}
+  /* celular: círculos à esquerda (2, 2 e 1) e o vídeo da Polpa à direita, como no computador */
+  .mt-cores{grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:10px;align-items:center}
+  .mt-cores .colors{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;width:auto;margin:0}
+  .mt-cores .colors .dot{width:100%}
+  .mt-cores .colors .dot:nth-child(5){grid-column:1/-1;justify-self:center;width:calc(50% - 3px)}
+  .mt-polpa{--pv:100%}
+  .mt-produtos{margin-top:22px}
+}
+</style>
+<style id="skills-icones-css">
+/* TESTE LOCAL · Skills com ícones no lugar dos nomes (o nome fica para leitor de tela e no "title") */
+.chips span.ico{display:grid;place-items:center;width:46px;height:46px;padding:0}
+.chips span.ico img{display:block;width:22px;height:22px}
+.chips .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+</style>
+<style id="sobre-foto-css">
+/* Sobre mim, versão B: foto de óculos pequena junto da apresentação. Computador: círculo de 160px à direita do
+   quadro, alinhado ao topo. Celular: círculo de 120px centralizado acima do quadro. */
+#sobre .about{grid-template-columns:minmax(0,1fr)}
+#sobre .sobre-corpo{display:grid;grid-template-columns:minmax(0,1fr) 160px;gap:36px;align-items:start;max-width:780px}
+#sobre .sobre-corpo .note{grid-column:1;grid-row:1}
+#sobre .sobre-corpo .circle{grid-column:2;grid-row:1;width:160px;justify-self:end}
+@media (max-width:820px){
+  #sobre .sobre-corpo{grid-template-columns:minmax(0,1fr);gap:22px}
+  #sobre .sobre-corpo .circle{grid-column:1;grid-row:1;width:120px;justify-self:center}
+  #sobre .sobre-corpo .note{grid-row:2}
+}
+</style>
+<style id="mobile-lado-a-lado-css">
+/* Feedback da Karen (Canva): Sobre mim e Certificados lado a lado também no celular; foto redonda grande, quase da altura do texto */
+#sobre .sobre-corpo{grid-template-columns:minmax(0,1fr) 290px;gap:44px;align-items:center;max-width:980px}
+#sobre .sobre-corpo .circle{width:100%}
+/* Certificados como no print da Karen: esquerda = foto (topo alinhado ao título) + texto da formação embaixo; direita = título + certificados */
+.cert{align-items:start}
+.cert-left{display:grid;gap:20px;align-content:start;max-width:380px}
+.cert-left .cert-photo{max-width:none}
+/* coluna da direita com a mesma altura da esquerda; título centralizado no topo, certificados terminam junto com o texto */
+.cert{align-items:stretch}
+.cert-copy{display:flex;flex-direction:column;justify-content:space-between}
+.cert-copy h2{text-align:center}
+/* computador: fileira de baixo termina junto com o texto; a de cima sobe — o espaço livre fica dividido igual (título→cima e cima→baixo) */
+@media (min-width:821px){
+  .cert .cert-grid{flex:1;grid-template-rows:minmax(0,1fr) auto minmax(12px,1fr) auto;row-gap:0}
+  .cert .cert-grid .zoom:nth-child(-n+2){grid-row:2}
+  .cert .cert-grid .zoom:nth-child(n+3){grid-row:4}
+}
+@media (max-width:820px){
+  /* celular: um certificado embaixo do outro; a coluna não cresce além da foto + texto e os 4 dividem essa altura */
+  .cert .cert-copy{contain:size}
+  .cert .cert-grid{flex:1;min-height:0;grid-template-columns:minmax(0,1fr);grid-template-rows:repeat(4,minmax(0,1fr));gap:8px}
+  .cert .cert-grid .zoom{width:100%;height:100%;min-height:0;display:grid;grid-template:minmax(0,1fr)/minmax(0,1fr);place-items:center;overflow:visible;border-radius:0}
+  .cert .cert-grid img{display:block;height:100%;width:auto;max-width:100%;aspect-ratio:1200/851;object-fit:contain;border-radius:10px}
+}
+@media (max-width:820px){
+  .cert-left{gap:12px;max-width:none}
+  .cert-left .lead{font-size:.8rem;line-height:1.5}
+  #sobre .sobre-corpo{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:14px;align-items:center}
+  #sobre .sobre-corpo .circle{grid-column:2;grid-row:1;width:100%;justify-self:end}
+  #sobre .sobre-corpo .note{grid-column:1;grid-row:1;padding:18px 13px 15px}
+  #sobre .sobre-corpo .note p{font-size:.74rem;line-height:1.5}
+  #sobre .sobre-corpo .note p+p{margin-top:7px}
+  .cert{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px;align-items:stretch}
+  .cert-photo{width:auto;margin-inline:0;border-radius:14px}
+  .cert-copy{gap:12px}
+  .cert-copy h2{font-size:clamp(1.2rem,6vw,2.4rem);white-space:nowrap;position:relative;z-index:1}
+  .cert-grid{gap:6px}
+}
+@media (min-width:600px) and (max-width:820px){#sobre .sobre-corpo{grid-template-columns:minmax(0,1fr) 230px}}
+</style>
+<style id="cert-grid-css">
+/* Certificados: um botão de zoom por certificado, inteiros (sem corte) */
+.cert-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;min-width:0}
+.cert-grid .zoom{border-radius:10px}
+.cert-grid img{width:100%;height:auto;border-radius:10px}
+</style>
+<style id="pano-zoom-css">
+/* Cases 2 e 3 · zoom que também é carrossel (componente próprio; o #lb dos outros zooms não muda) */
+.pano-zoom{position:fixed;inset:0;z-index:91;background:rgba(5,2,10,.92);opacity:0;visibility:hidden;transition:opacity .25s,visibility .25s;overflow:hidden}
+.pano-zoom.on{opacity:1;visibility:visible}
+.pano-zoom-strip{position:absolute;inset:0;display:flex;touch-action:none;cursor:grab;will-change:transform;transition:transform .32s cubic-bezier(.22,1,.36,1)}
+.pano-zoom-strip.dragging{transition:none;cursor:grabbing}
+.pano-zoom-item{flex:0 0 100%;display:grid;grid-template:minmax(0,1fr) / minmax(0,1fr);place-items:center;padding:calc(64px + env(safe-area-inset-top,0px)) 16px calc(52px + env(safe-area-inset-bottom,0px));min-width:0}
+.pano-zoom-item img{display:block;max-width:min(1000px,100%);max-height:100%;width:auto;height:auto;border-radius:10px;box-shadow:0 30px 80px rgba(0,0,0,.8);-webkit-user-drag:none;user-select:none;cursor:default}
+.pano-zoom-close{position:absolute;top:calc(16px + env(safe-area-inset-top,0px));right:16px;z-index:3;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:rgba(255,255,255,.08);color:#fff;font-size:1.3rem;cursor:pointer}
+.pano-zoom-arrow{position:absolute;top:50%;z-index:3;width:44px;height:44px;margin-top:-22px;border-radius:50%;border:0;background:rgba(255,255,255,.85);color:#262626;font:600 1.6rem/1 var(--ui);cursor:pointer;box-shadow:0 0 8px rgba(0,0,0,.35)}
+.pano-zoom-arrow.prev{left:16px}.pano-zoom-arrow.next{right:16px}
+.pano-zoom-count{position:absolute;top:calc(24px + env(safe-area-inset-top,0px));left:50%;transform:translateX(-50%);z-index:3;color:rgba(255,255,255,.75);font:600 .8rem var(--ui);font-variant-numeric:tabular-nums;pointer-events:none}
+.pano-zoom-dots{position:absolute;left:0;right:0;bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:3;display:flex;justify-content:center;gap:6px;pointer-events:none}
+.pano-zoom-dots i{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.35)}
+.pano-zoom-dots i.on{background:#0095f6}
+@media (hover:none){.pano-zoom-arrow,.pano-zoom-count{display:none}} /* no celular: arraste e pontinhos */
+@media (prefers-reduced-motion:reduce){.pano-zoom,.pano-zoom-strip{transition:none}}
+</style>
+<style id="cases-pano-css">
+/* Cases 2 e 3 · carrossel do Instagram com as artes em "polaroides" sobrepostas, como no post de referência da Karen:
+   a arte atual fica grande, a próxima entra pequena POR CIMA no canto superior direito (cortada pela borda) e a anterior
+   fica por baixo, só com uma ponta à esquerda. Posições calculadas no JS (variáveis --x/--y/--s/--r/--z/--o). */
+.pano{grid-column:1/-1;min-width:0;--pw:clamp(250px,28vw,320px)} /* mesmo --pw do Case 1: os três cases têm o mesmo palco */
+@media (max-width:640px){.pano{--pw:min(70vw,285px)}}
+.pano-frame{position:relative;overflow:hidden;padding-top:10px}
+.pano-frame::before{content:"";position:absolute;left:50%;top:46%;width:min(620px,90%);aspect-ratio:1.5;transform:translate(-50%,-50%);background:radial-gradient(closest-side,rgba(142,92,255,.38),transparent);pointer-events:none}
+.pano-track{position:relative;height:calc(var(--pw) * 2.006 + 48px);touch-action:pan-y;user-select:none;-webkit-user-select:none;cursor:grab;outline:none}
+.pano-track.dragging{cursor:grabbing}
+.pano-track:focus-visible{box-shadow:inset 0 0 0 2px var(--lilac)}
+.pano-slide{position:absolute;left:0;top:0;width:var(--cw,60%);margin:0;padding:var(--pad,7px);background:#fff;box-shadow:0 12px 30px rgba(0,0,0,.55);transform-origin:0 0;
+  transform:translate(var(--x,0px),var(--y,0px)) rotate(var(--r,0deg)) scale(var(--s,1));z-index:var(--z,1);opacity:var(--o,0);
+  transition:transform .6s cubic-bezier(.22,1,.36,1),opacity .4s ease;will-change:transform;cursor:pointer}
+.pano-slide.is-active{cursor:zoom-in}
+.pano-slide img{display:block;width:100%;height:auto;pointer-events:none;-webkit-user-drag:none}
+.pano-track.dragging .pano-slide{transition:none}
+.pano-count{position:absolute;top:12px;right:12px;z-index:40;padding:4px 9px;border-radius:999px;background:rgba(26,26,26,.8);color:#fff;font:600 .75rem/1.3 var(--ui);font-variant-numeric:tabular-nums;pointer-events:none}
+.pano-arrow{position:absolute;left:var(--ax,12px);top:var(--ay,50%);z-index:40;width:30px;height:30px;margin-top:-15px;transition:background .2s,left .6s cubic-bezier(.22,1,.36,1),top .6s cubic-bezier(.22,1,.36,1);padding:0;border:0;border-radius:50%;background:rgba(255,255,255,.82);box-shadow:0 0 5px rgba(0,0,0,.25);cursor:pointer;transition:background .2s}
+.pano-arrow:hover{background:#fff}
+.pano-arrow::before{content:"";position:absolute;left:50%;top:50%;width:8px;height:8px;border:solid #262626;border-width:0 2px 2px 0;transform:translate(-65%,-50%) rotate(-45deg)}
+.pano-arrow.prev::before{transform:translate(-35%,-50%) rotate(135deg)}
+@media (hover:none){.pano-arrow,.pano-count{display:none}} /* no celular, como no app: só o arraste e os pontinhos */
+.pano-dots{display:flex;justify-content:center;gap:4px;margin-top:6px}
+.pano-dots button{width:6px;height:6px;padding:0;border:0;border-radius:50%;background:rgba(255,255,255,.35);cursor:pointer;transition:background .2s}
+.pano-dots button[aria-current="true"]{background:#0095f6}
+@media (prefers-reduced-motion:reduce){.pano-slide{transition:none}}
+</style>
+<script id="perf-keys-js">
+/* Diagnóstico de performance: chaves ?perf=a,b (noblur, stars1x, nostars, noparallax, lazyimg, noreveal, noloop, all).
+   Sem o parâmetro, window.__perf fica vazio e nada no site muda. */
+(function(){
+  var m = /[?&]perf=([^&#]*)/.exec(location.search), P = {};
+  if (m) decodeURIComponent(m[1]).split(',').forEach(function(k){ k = k.trim().toLowerCase(); if (k) P[k] = true; });
+  if (P.all) P.noblur = P.stars1x = P.nostars = P.noparallax = P.lazyimg = P.noreveal = P.noloop = true;
+  window.__perf = P;
+  if (P.noloop) document.documentElement.classList.add('perf-noloop'); // noloop: animações infinitas decorativas paradas (CSS)
+  if (P.noblur){ // sem backdrop-filter em lugar nenhum; fundos sólidos equivalentes
+    var st = document.createElement('style'); st.id = 'perf-noblur';
+    st.textContent = '*,*::before,*::after{-webkit-backdrop-filter:none!important;backdrop-filter:none!important}' +
+      '.nav{background:rgba(7,4,13,.94)!important}.group{background:rgba(18,10,34,.94)!important}.lb{background:rgba(5,2,10,.97)!important}';
+    document.head.appendChild(st);
+  }
+  if (P.lazyimg && 'MutationObserver' in window){ // imagens abaixo da dobra: lazy + decodificação assíncrona, aplicadas assim que cada <img> é criado
+    var mo = new MutationObserver(function(ms){
+      ms.forEach(function(mu){ Array.prototype.forEach.call(mu.addedNodes, function(n){
+        var imgs = n.tagName === 'IMG' ? [n] : (n.querySelectorAll ? n.querySelectorAll('img') : []);
+        Array.prototype.forEach.call(imgs, function(img){ if (img.id === 'heroImg') return; img.loading = 'lazy'; img.decoding = 'async'; });
+      }); });
+    });
+    mo.observe(document.documentElement, {childList: true, subtree: true});
+    document.addEventListener('DOMContentLoaded', function(){ mo.disconnect(); });
+  }
+})();
+</script>
+</head>
+<body>
+
+<canvas id="sky" aria-hidden="true"></canvas>
+<div class="nebula" aria-hidden="true"></div>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#topo">KAREN MATHIAS</a>
+    <nav class="nav-links" aria-label="Seções">
+      <a href="#sobre">Sobre mim</a>
+      <a href="#skills">Skills</a>
+      <a href="#mutti">Mutti</a>
+      <a href="#cases">Cases</a>
+    </nav>
+    <a class="btn" href="#contato">Fale comigo</a>
+  </div>
+</header>
+
+<main id="topo">
+  <!-- PORTFÓLIO -->
+  <section class="hero">
+    <span class="star3d" data-speed="-0.15" style="--s:70px;left:6%;top:90px"><i></i></span>
+    <span class="star3d pink" data-speed="0.2" style="--s:42px;right:8%;top:60px"><i></i></span>
+    <span class="star3d" data-speed="0.25" style="--s:54px;right:12%;bottom:40px"><i></i></span>
+    <div class="wrap">
+      <h1 class="word" aria-label="Portfólio" id="word">PORTFÓLIO</h1>
+      <div class="hero-photo">
+        <div class="frame"><picture><source media="(max-width:700px)" srcset="img/hero_vertical.jpg" width="843" height="1264"><img id="heroImg" src="img/hero.jpg" width="1600" height="1000" loading="eager" fetchpriority="high" alt="Karen Mathias gravando conteúdo com o celular no tripé"></picture></div>
+      </div>
+      <div class="hero-meta">
+        <div class="roles"><span>Social media</span><span>Design</span><span>Vídeos</span></div>
+        <div class="socials">
+          <a href="https://www.instagram.com/karenmathias.sm" target="_blank" rel="noopener"><i class="fa-brands fa-instagram" aria-hidden="true"></i>@karenmathias.sm</a>
+          <a href="https://www.behance.net/karenmathias_sm" target="_blank" rel="noopener"><i class="fa-brands fa-behance" aria-hidden="true"></i>Behance</a>
+          <button type="button" id="copy-email" title="Copiar e-mail"><i class="fa-regular fa-envelope" aria-hidden="true"></i><span id="email">kmsocialmedia.co@gmail.com</span></button>
+        </div>
+      </div>
+      <div class="hero-ctas">
+        <a class="btn pulse" href="#contato">Fale comigo <span class="arrow">→</span></a>
+        <a class="btn ghost" href="#mutti">Ver meus trabalhos ↓</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE MIM -->
+  <section id="sobre">
+    <div class="wrap about">
+      <div class="reveal">
+        <h2 class="retro">Sobre mim</h2>
+        <div class="sobre-corpo">
+          <div class="circle"><img src="img/glasses.jpg" width="385" height="400" loading="lazy" decoding="async" alt="Karen Mathias de óculos"></div>
+          <div class="note">
+            <p><b>Olá, sou a Karen Mathias!</b></p>
+            <p>Há 4 anos, transformo redes sociais em canais estratégicos para marcas que querem crescer, se posicionar e criar conexão com seu público.</p>
+            <p>Meu trabalho combina estratégia de conteúdo, criatividade e análise de dados para criar conteúdos com propósito claro, autenticidade e que gere impacto positivo para a marca.</p>
+            <span class="corner-star" aria-hidden="true">✦</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICADOS -->
+  <section>
+    <span class="star3d pink" data-speed="-0.12" style="--s:46px;right:6%;top:60px"><i></i></span>
+    <div class="wrap cert">
+      <div class="cert-left reveal">
+        <div class="cert-photo"><img src="img/portrait.jpg" width="800" height="1000" loading="lazy" decoding="async" alt="Karen Mathias sorrindo"></div>
+        <p class="lead">Sou formada em Administração, Marketing Digital e Vendas, tenho também certificações na área de Social Media. Estou sempre ampliando meu olhar sobre os conteúdos nas redes sociais e me permitindo enxergá-las além da criação e estratégia de conteúdo.</p>
+      </div>
+      <div class="cert-copy reveal">
+        <h2 class="retro">Certificados <span class="sparkle">✦</span></h2>
+        <div class="cert-grid">
+          <button class="zoom" data-src="img/cert_unip.webp" aria-label="Ampliar diploma da Universidade Paulista"><img src="img/cert_unip.webp" width="1200" height="851" loading="lazy" decoding="async" alt="Diploma de Bacharela em Administração, Universidade Paulista"></button>
+          <button class="zoom" data-src="img/cert_anhembi.webp" aria-label="Ampliar certificado da Anhembi Morumbi"><img src="img/cert_anhembi.webp" width="1200" height="851" loading="lazy" decoding="async" alt="Certificado de Especialização em Negócios em Mídias Digitais, Universidade Anhembi Morumbi"></button>
+          <button class="zoom" data-src="img/cert_uniamerica.webp" aria-label="Ampliar certificado da UniAmérica"><img src="img/cert_uniamerica.webp" width="1200" height="851" loading="lazy" decoding="async" alt="Certificado de MBA em Marketing Digital e Vendas, UniAmérica Descomplica"></button>
+          <button class="zoom" data-src="img/cert_social_media.webp" aria-label="Ampliar certificado do Social Media de Elite"><img src="img/cert_social_media.webp" width="1200" height="851" loading="lazy" decoding="async" alt="Certificado do curso Social Media na Prática, Social Media de Elite"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <span class="star3d" data-speed="0.18" style="--s:60px;left:4%;bottom:60px"><i></i></span>
+    <div class="wrap">
+      <div class="skills-head"><h2 class="retro">Skills</h2></div>
+      <div class="skills stagger">
+        <div class="group"><h3>Redes sociais</h3><div class="chips"><span class="ico" title="Instagram"><img src="img/icons/instagram.svg" width="22" height="22" alt="" loading="lazy"><i class="sr">Instagram</i></span><span class="ico" title="TikTok"><img src="img/icons/tiktok.svg" width="22" height="22" alt="" loading="lazy"><i class="sr">TikTok</i></span><span class="ico" title="Facebook"><img src="img/icons/facebook.svg" width="22" height="22" alt="" loading="lazy"><i class="sr">Facebook</i></span><span class="ico" title="Pinterest"><img src="img/icons/pinterest.svg" width="22" height="22" alt="" loading="lazy"><i class="sr">Pinterest</i></span><span class="ico" title="LinkedIn"><img src="img/icons/linkedin.svg" width="22" height="22" alt="" loading="lazy"><i class="sr">LinkedIn</i></span><span class="ico" title="X"><img src="img/icons/x.svg" width="22" height="22" alt="" loading="lazy"><i class="sr">X</i></span></div></div>
+        <div class="group"><h3>Edição</h3><div class="chips"><span class="ico" title="CapCut"><img src="img/icons/capcut.svg" width="22" height="22" alt="" loading="lazy"><i class="sr">CapCut</i></span><span class="ico" title="Photoroom"><img src="img/icons/photoroom.svg" width="22" height="22" alt="" loading="lazy"><i class="sr">Photoroom</i></span><span class="ico" title="Lightroom"><img src="img/icons/adobelightroom.svg" width="22" height="22" alt="" loading="lazy"><i class="sr">Lightroom</i></span></div></div>
+        <div class="group"><h3>Criação e design</h3><div class="chips"><span class="ico" title="Canva"><img src="img/icon_canva.png" width="22" height="22" alt="" loading="lazy"><i class="sr">Canva</i></span><span class="ico" title="Procreate"><img src="img/icon_procreate.png" width="22" height="22" alt="" loading="lazy"><i class="sr">Procreate</i></span></div></div>
+        <div class="group"><h3>IA</h3><div class="chips"><span class="ico" title="ChatGPT"><img src="img/icons/openai.svg" width="22" height="22" alt="" loading="lazy"><i class="sr">ChatGPT</i></span><span class="ico" title="Claude"><img src="img/icons/claude.svg" width="22" height="22" alt="" loading="lazy"><i class="sr">Claude</i></span><span class="ico" title="Gemini"><img src="img/icons/googlegemini.svg" width="22" height="22" alt="" loading="lazy"><i class="sr">Gemini</i></span></div></div>
+        <div class="group special"><h3>Especialidades</h3><ul><li>Mídia social</li><li>Marketing de conteúdo</li><li>Copywriting</li><li>Edição e criação de vídeos</li><li>Posicionamento de marca</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEU PRIMEIRO TRABALHO -->
+  <section id="mutti">
+    <div class="wrap first">
+      <div class="first-copy reveal">
+        <span class="client-tag">Mutti Pomodoro · Foodservice</span>
+        <h2 class="retro">Meu primeiro trabalho como Social Media</h2>
+        <div class="counter" id="counter">
+          <div><b data-count="36">36</b><small>seguidores empresariais</small></div>
+          <span class="to">→</span>
+          <div><b class="grad" data-count="1304">1.304</b><small>seguidores hoje</small></div>
+        </div>
+        <p class="lead">Em 4 meses, atingimos nossos objetivos de aumentar as contas profissionais alcançadas e fechamos parceria com um dos maiores influenciadores de pizza napolitana no Brasil. Começamos com 36 seguidores empresariais e chegamos em 1.304, um crescimento impressionante para uma empresa B2B do setor de Foodservice.</p>
+      </div>
+      <div class="compare-wrap reveal">
+        <div class="compare" id="compare">
+          <img src="img/mutti_antes.webp" width="795" height="1140" loading="lazy" decoding="async" alt="Perfil da Mutti antes, com 36 seguidores">
+          <img class="after" src="img/mutti_depois.webp" width="795" height="1140" loading="lazy" decoding="async" alt="Perfil da Mutti depois, com 1.304 seguidores">
+          <span class="tag l">Antes</span><span class="tag r">Depois</span>
+          <div class="handle"></div>
+          <input type="range" id="compare-range" min="0" max="100" value="50" aria-label="Comparar antes e depois">
+        </div>
+        <p class="hint">⟷ arraste para comparar</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIPOGRAFIA (como nos prints da Karen: 2 folhas de fonte → aplicação; no celular, carrossel dos Cases 2/3) -->
+  <section class="mt">
+    <span class="star3d pink" data-speed="0.15" style="--s:40px;left:7%;top:80px"><i></i></span>
+    <div class="wrap">
+      <div class="reveal">
+        <h2 class="retro">Tipografia</h2>
+        <p class="sub">Cursiva</p>
+        <p class="lead mt-lead">A Mutti disponibilizou seu padrão de tipografia para ser seguido em todos os materiais de comunicação.</p>
+      </div>
+      <div class="mt-row reveal">
+        <button class="zoom mt-item" data-src="img/tipo_kitten.webp" aria-label="Ampliar folha da fonte Kitten Swash" style="--a:0.92"><img src="img/tipo_kitten.webp" width="970" height="1054" loading="lazy" decoding="async" alt="Folha da fonte cursiva Kitten Swash Monoline"></button>
+        <button class="zoom mt-item" data-src="img/tipo_shelby.webp" aria-label="Ampliar folha da fonte Shelby" style="--a:1.25"><img src="img/tipo_shelby.webp" width="1030" height="824" loading="lazy" decoding="async" alt="Folha da fonte cursiva Shelby"></button>
+        <svg class="mt-arrow" viewBox="0 0 130 64" aria-hidden="true"><path d="M5 50C36 18 82 12 120 32"/><path d="M99 16l22 17-25 9"/></svg>
+        <button class="zoom mt-item" data-src="img/tipo_cursiva_arte.webp" aria-label="Ampliar aplicação da cursiva" style="--a:1"><img src="img/tipo_cursiva_arte.webp" width="1080" height="1080" loading="lazy" decoding="async" alt="Fonte cursiva aplicada nas latas Mutti Polpa e Pelati: Sabor fresco, Sabor delicado"></button>
+      </div>
+        <div class="pano mutti-pano" role="region" aria-roledescription="carrossel" aria-label="Carrossel da tipografia cursiva">
+          <div class="pano-frame">
+          <div class="pano-track">
+            <figure class="pano-slide"><img src="img/tipo_kitten.webp" width="970" height="1054" loading="lazy" decoding="async" alt="Folha da fonte cursiva Kitten Swash Monoline" draggable="false"></figure>
+            <figure class="pano-slide"><img src="img/tipo_shelby.webp" width="1030" height="824" loading="lazy" decoding="async" alt="Folha da fonte cursiva Shelby" draggable="false"></figure>
+            <figure class="pano-slide"><img src="img/tipo_cursiva_arte.webp" width="1080" height="1080" loading="lazy" decoding="async" alt="Fonte cursiva aplicada nas latas Mutti Polpa e Pelati: Sabor fresco, Sabor delicado" draggable="false"></figure>
+          </div>
+            <span class="pano-count" aria-hidden="true">1/3</span>
+            <button type="button" class="pano-arrow prev" data-dir="-1" aria-label="Arte anterior" hidden></button>
+            <button type="button" class="pano-arrow next" data-dir="1" aria-label="Próxima arte"></button>
+          </div>
+          <div class="pano-dots" role="group" aria-label="Escolher arte"></div>
+        </div>
+      <div class="reveal mt-sub">
+        <p class="sub">Sans Serifa</p>
+        <p class="lead mt-lead">A empresa exigia que esse padrão fosse respeitado, garantindo uniformidade e coerência em todas as representações visuais da marca.</p>
+      </div>
+      <div class="mt-row reveal">
+        <button class="zoom mt-item" data-src="img/tipo_rhode.webp" aria-label="Ampliar folha da fonte Rhode" style="--a:1.06"><img src="img/tipo_rhode.webp" width="1080" height="1019" loading="lazy" decoding="async" alt="Folha da fonte Rhode Bold Condensed"></button>
+        <button class="zoom mt-item" data-src="img/tipo_gotham.webp" aria-label="Ampliar folha da fonte Gotham" style="--a:1.18"><img src="img/tipo_gotham.webp" width="1080" height="915" loading="lazy" decoding="async" alt="Folha da fonte Gotham Book"></button>
+        <svg class="mt-arrow" viewBox="0 0 130 64" aria-hidden="true"><path d="M5 50C36 18 82 12 120 32"/><path d="M99 16l22 17-25 9"/></svg>
+        <button class="zoom mt-item" data-src="img/tipo_sans_post.webp" aria-label="Ampliar aplicação da sans serifa" style="--a:1.39"><img src="img/tipo_sans_post.webp" width="1080" height="1080" loading="lazy" decoding="async" alt="Fonte sans serifa aplicada em post da Mutti Pelati"></button>
+      </div>
+        <div class="pano mutti-pano" role="region" aria-roledescription="carrossel" aria-label="Carrossel da tipografia sans serifa">
+          <div class="pano-frame">
+          <div class="pano-track">
+            <figure class="pano-slide"><img src="img/tipo_rhode.webp" width="1080" height="1019" loading="lazy" decoding="async" alt="Folha da fonte Rhode Bold Condensed" draggable="false"></figure>
+            <figure class="pano-slide"><img src="img/tipo_gotham.webp" width="1080" height="915" loading="lazy" decoding="async" alt="Folha da fonte Gotham Book" draggable="false"></figure>
+            <figure class="pano-slide"><img src="img/tipo_sans_post.webp" width="1080" height="1080" loading="lazy" decoding="async" alt="Fonte sans serifa aplicada em post da Mutti Pelati" draggable="false"></figure>
+          </div>
+            <span class="pano-count" aria-hidden="true">1/3</span>
+            <button type="button" class="pano-arrow prev" data-dir="-1" aria-label="Arte anterior" hidden></button>
+            <button type="button" class="pano-arrow next" data-dir="1" aria-label="Próxima arte"></button>
+          </div>
+          <div class="pano-dots" role="group" aria-label="Escolher arte"></div>
+        </div>
+    </div>
+  </section>
+
+  <!-- CORES E CONTRASTE (círculos sobrepostos no computador + vídeo da Polpa ao lado) -->
+  <section class="mt">
+    <div class="wrap">
+      <h2 class="retro reveal">Cores e Contraste</h2>
+      <p class="lead reveal mt-lead">Inspirado nas personalidades dos produtos Mutti, além da tipografia, era importante seguir o modelo de cores.</p>
+      <div class="mt-cores">
+        <div class="colors" id="colors">
+          <div class="dot" style="background:#e00b13"><i class="hex">#E00B13</i><b>Vermelho Intenso</b><span>Simboliza urgência e chama a atenção com impacto</span></div>
+          <div class="dot" style="background:#d52322"><i class="hex">#D52322</i><b>Vermelho Clássico</b><span>Continuidade para os formatos antigos. Usados para linhas escritas com fundo claro</span></div>
+          <div class="dot gold" style="background:#ca9303"><i class="hex">#CA9303</i><b>Dourado Vibrante</b><span>Usado para destaques e dar energia, transmitindo entusiasmo e calor</span></div>
+          <div class="dot" style="background:#b1232b"><i class="hex">#B1232B</i><b>Vermelho em Negrito</b><span>Destaca linhas e pequenos elementos gráficos</span></div>
+          <div class="dot" style="background:#f86c51"><i class="hex">#F86C51</i><b>Vermelho Alegre</b><span>Enfatiza pacotes, ilustrações e animações. Usado em diversos formatos</span></div>
+        </div>
+        <button type="button" class="polpa-btn reveal mt-polpa" aria-label="Ampliar vídeo do criativo Mutti Polpa"><video class="mutti-polpa" src="video/mutti_polpa.mp4" width="720" height="1280" poster="img/mutti_polpa_arte.webp" muted playsinline webkit-playsinline loop autoplay preload="none" aria-hidden="true"></video><img src="img/mutti_polpa_arte.webp" width="720" height="1280" loading="lazy" decoding="async" alt="Criativo Mutti Polpa, tomates finamente picados" hidden></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOGO E IMAGENS -->
+  <section class="mt">
+    <span class="star3d" data-speed="-0.18" style="--s:56px;right:5%;top:100px"><i></i></span>
+    <div class="wrap">
+      <div class="reveal">
+        <h2 class="retro">Logo e Imagens</h2>
+        <p class="sub">(Criativos)</p>
+        <p class="lead mt-lead">A empresa também forneceu a Logo para personalização e as imagens em png para os criativos.</p>
+      </div>
+      <button class="zoom reveal mt-produtos" data-src="img/mutti_produtos.jpg" aria-label="Ampliar logo e produtos"><img src="img/mutti_produtos.jpg" width="1095" height="335" loading="lazy" decoding="async" alt="Logo Mutti original e versão Foodservice Professional, com as embalagens dos produtos"></button>
+    </div>
+  </section>
+
+  <!-- INSTAGRAM (celular → 2 grades do feed; no celular, carrossel dos Cases 2/3) -->
+  <section class="mt">
+    <div class="wrap">
+      <div class="reveal">
+        <h2 class="retro">Instagram</h2>
+        <p class="sub">(Posts)</p>
+        <p class="lead mt-lead">Todos os posts seguiram os padrões de cores e tipografia da marca, refletindo sua personalidade. Cada elemento foi escolhido para garantir uma comunicação coesa, profissional e uma presença digital consistente e marcante.</p>
+      </div>
+      <div class="mt-row mt-insta reveal">
+        <button class="zoom mt-item mt-phone" data-src="img/insta_celular.webp" aria-label="Ampliar perfil da Mutti no Instagram" style="--a:0.99"><img src="img/insta_celular.webp" width="1080" height="1339" loading="lazy" decoding="async" alt="Perfil da Mutti Pomodoro Professional no Instagram"></button>
+        <svg class="mt-arrow" viewBox="0 0 130 64" aria-hidden="true"><path d="M5 50C36 18 82 12 120 32"/><path d="M99 16l22 17-25 9"/></svg>
+        <button class="zoom mt-item" data-src="img/insta_grade_1.webp" aria-label="Ampliar grade de posts, parte 1" style="--a:0.5625"><img src="img/insta_grade_1.webp" width="600" height="1067" loading="lazy" decoding="async" alt="Grade de posts da Mutti no Instagram, parte 1"></button>
+        <button class="zoom mt-item" data-src="img/insta_grade_2.webp" aria-label="Ampliar grade de posts, parte 2" style="--a:0.5625"><img src="img/insta_grade_2.webp" width="600" height="1067" loading="lazy" decoding="async" alt="Grade de posts da Mutti no Instagram, parte 2"></button>
+      </div>
+        <div class="pano mutti-pano mt-insta-pano" role="region" aria-roledescription="carrossel" aria-label="Carrossel do Instagram da Mutti">
+          <div class="pano-frame">
+          <div class="pano-track">
+            <figure class="pano-slide is-phone"><img src="img/insta_celular.webp" width="1080" height="1339" loading="lazy" decoding="async" alt="Perfil da Mutti Pomodoro Professional no Instagram" draggable="false"></figure>
+            <figure class="pano-slide"><img src="img/insta_grade_1.webp" width="600" height="1067" loading="lazy" decoding="async" alt="Grade de posts da Mutti no Instagram, parte 1" draggable="false"></figure>
+            <figure class="pano-slide"><img src="img/insta_grade_2.webp" width="600" height="1067" loading="lazy" decoding="async" alt="Grade de posts da Mutti no Instagram, parte 2" draggable="false"></figure>
+          </div>
+            <span class="pano-count" aria-hidden="true">1/3</span>
+            <button type="button" class="pano-arrow prev" data-dir="-1" aria-label="Arte anterior" hidden></button>
+            <button type="button" class="pano-arrow next" data-dir="1" aria-label="Próxima arte"></button>
+          </div>
+          <div class="pano-dots" role="group" aria-label="Escolher arte"></div>
+        </div>
+    </div>
+  </section>
+
+  <!-- CASES -->
+  <section id="cases">
+    <span class="star3d pink" data-speed="0.2" style="--s:50px;left:5%;top:40%"><i></i></span>
+    <div class="wrap">
+      <article class="case reveal">
+        <span class="num">Case 1</span>
+        <div class="case-info"><h3>Mayara Witt Said <span>| Projetos</span></h3>
+          <ul><li>Construção e posicionamento da marca</li><li>Estratégia e planejamento de conteúdo</li><li>Identidade visual e direção criativa</li><li>Criação de conteúdos autorais</li><li>Roteiros, gravação e edição de vídeos</li><li>Desenvolvimento de projetos e pré-lançamentos</li><li>Captação de conteúdos presencialmente para pré-lançamento</li><li>Foco em autoridade, conexão e posicionamento digital</li></ul></div>
+        <div class="phone-stage" id="phoneStage" tabindex="0" role="region" aria-roledescription="carrossel" aria-label="Vídeos do Case 1. Use as setas do teclado para navegar.">
+          <div class="phone-track">
+            <figure class="phone-slide"><img src="img/case1_phone1.webp" width="1116" height="2238" loading="lazy" decoding="async" alt="Vídeo com o planeta Terra e o número 840 mil" draggable="false"></figure>
+            <figure class="phone-slide"><img src="img/case1_phone2.webp" width="1116" height="2238" loading="lazy" decoding="async" alt="Vídeo em aeroporto, Mayara conduzindo a câmera pela mão" draggable="false"></figure>
+            <figure class="phone-slide"><img src="img/case1_phone3.webp" width="1116" height="2238" loading="lazy" decoding="async" alt="Vídeo da Mayara sentada numa poltrona, falando para a câmera" draggable="false"></figure>
+          </div>
+          <div class="phone-ctrl">
+            <button type="button" class="phone-nav" data-dir="-1" aria-label="Vídeo anterior">←</button>
+            <div class="phone-dots" role="group" aria-label="Escolher vídeo"></div>
+            <button type="button" class="phone-nav" data-dir="1" aria-label="Próximo vídeo">→</button>
+          </div>
+          <p class="phone-hint">Arraste para o lado ou toque no celular para ampliar</p>
+        </div>
+        <button class="zoom" data-src="img/case1_posts.webp" aria-label="Ampliar posts do case 1"><img src="img/case1_posts.webp" width="2268" height="1120" loading="lazy" decoding="async" alt="Posts em tons de laranja sobre a NR-1"></button>
+      </article>
+      <article class="case reveal">
+        <span class="num">Case 2</span>
+        <div class="case-info"><h3>Graziele <span>| Psicóloga</span></h3>
+          <ul><li>Reestruturação e reativação do perfil</li><li>Posicionamento e estratégia de comunicação</li><li>Desenvolvimento de identidade visual</li><li>Criação de conteúdo autoral alinhado à atuação profissional</li></ul></div>
+        <div class="pano" id="case2Pano" role="region" aria-roledescription="carrossel" aria-label="Carrossel do Case 2, Graziele">
+          <div class="pano-frame">
+          <div class="pano-track">
+            <figure class="pano-slide"><img src="img/case2_1.webp" width="1024" height="1280" loading="lazy" decoding="async" alt="Capa: Sua autoestima é sua ou dos outros? Mulher relaxando na banheira" draggable="false"></figure>
+            <figure class="pano-slide"><img src="img/case2_2.webp" width="1024" height="1280" loading="lazy" decoding="async" alt="Autoestima não vem do que dizem sobre você, mas do que você acredita sobre si mesma" draggable="false"></figure>
+            <figure class="pano-slide"><img src="img/case2_3.webp" width="1024" height="1280" loading="lazy" decoding="async" alt="Se você só se sente suficiente quando recebe validação externa, talvez seja hora de fortalecer sua relação consigo mesma" draggable="false"></figure>
+            <figure class="pano-slide"><img src="img/case2_4.webp" width="1024" height="1280" loading="lazy" decoding="async" alt="E se você se olhasse com o mesmo carinho, paciência e amor que dedica a quem ama?" draggable="false"></figure>
+            <figure class="pano-slide"><img src="img/case2_5.webp" width="1024" height="1280" loading="lazy" decoding="async" alt="Comece com pequenos gestos: o jeito que você se trata importa" draggable="false"></figure>
+            <figure class="pano-slide"><img src="img/case2_6.webp" width="1024" height="1280" loading="lazy" decoding="async" alt="Vamos conversar? Sua autoestima vem de dentro ou ainda depende dos outros?" draggable="false"></figure>
+          </div>
+            <span class="pano-count" aria-hidden="true">1/6</span>
+            <button type="button" class="pano-arrow prev" data-dir="-1" aria-label="Arte anterior" hidden></button>
+            <button type="button" class="pano-arrow next" data-dir="1" aria-label="Próxima arte"></button>
+          </div>
+          <div class="pano-dots" role="group" aria-label="Escolher arte"></div>
+        </div>
+      </article>
+      <article class="case reveal">
+        <span class="num">Case 3</span>
+        <div class="case-info"><h3>Luísa <span>| Psicóloga</span></h3>
+          <ul><li>Profissionalização e reestruturação do perfil</li><li>Identidade visual própria</li><li>Planejamento editorial</li><li>Conteúdo autoral estratégico</li><li>Roteiros e edição de vídeos</li><li>Foco em alcance, autoridade e engajamento</li></ul></div>
+        <div class="pano" id="case3Pano" role="region" aria-roledescription="carrossel" aria-label="Carrossel do Case 3, Luísa">
+          <div class="pano-frame">
+          <div class="pano-track">
+            <figure class="pano-slide"><img src="img/case3_1.webp" width="1080" height="1440" loading="lazy" decoding="async" alt="Capa: Como é a psicoterapia comigo? Luísa Gomes, psicóloga clínica" draggable="false"></figure>
+            <figure class="pano-slide"><img src="img/case3_2.webp" width="1080" height="1440" loading="lazy" decoding="async" alt="Comigo você encontrará um espaço seguro de escuta, dedicação, presença e acolhimento" draggable="false"></figure>
+            <figure class="pano-slide"><img src="img/case3_3.webp" width="1080" height="1440" loading="lazy" decoding="async" alt="Aqui você pode ser você mesmo(a), com sua história, seu silêncio e suas emoções" draggable="false"></figure>
+            <figure class="pano-slide"><img src="img/case3_4.webp" width="1080" height="1440" loading="lazy" decoding="async" alt="A psicanálise é um espaço de escuta atenta para compreender e ressignificar dores emocionais" draggable="false"></figure>
+            <figure class="pano-slide"><img src="img/case3_5.webp" width="1080" height="1440" loading="lazy" decoding="async" alt="Atendimento online ou presencial, num espaço seguro, com o respaldo de uma profissional" draggable="false"></figure>
+            <figure class="pano-slide"><img src="img/case3_6.webp" width="1080" height="1440" loading="lazy" decoding="async" alt="Fechamento: me chame no WhatsApp e agende um encontro" draggable="false"></figure>
+          </div>
+            <span class="pano-count" aria-hidden="true">1/6</span>
+            <button type="button" class="pano-arrow prev" data-dir="-1" aria-label="Arte anterior" hidden></button>
+            <button type="button" class="pano-arrow next" data-dir="1" aria-label="Próxima arte"></button>
+          </div>
+          <div class="pano-dots" role="group" aria-label="Escolher arte"></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- MUITO OBRIGADA -->
+  <section class="thanks" id="contato">
+    <span class="star3d" data-speed="-0.2" style="--s:80px;left:8%;top:60px"><i></i></span>
+    <span class="star3d pink" data-speed="0.22" style="--s:48px;right:10%;bottom:80px"><i></i></span>
+    <div class="wrap">
+      <h2 class="retro reveal"><span>Muito</span><span class="grad">Obrigada!</span></h2>
+      <p class="lead reveal">Vamos fazer sua marca crescer com estratégia? Me chama e eu te conto como posso ajudar.</p>
+      <a class="btn pulse" href="https://wa.me/5511977686534?text=Oi%20Karen!%20Vi%20seu%20portf%C3%B3lio%20e%20quero%20conversar." target="_blank" rel="noopener">Chamar no WhatsApp <span class="arrow">→</span></a>
+      <div class="social-row" id="socialRow">
+        <a href="https://www.instagram.com/karenmathias.sm" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+        <a href="LINKEDIN_KAREN" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+        <a href="https://wa.me/5511977686534" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap"><span>© 2026 Karen Mathias</span><span>Social media · Design · Vídeos · Site por <a href="https://www.instagram.com/pivasolutionss" target="_blank" rel="noopener">PIVA Solutions</a></span></div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/5511977686534?text=Oi%20Karen!%20Vi%20seu%20portf%C3%B3lio%20e%20quero%20conversar." target="_blank" rel="noopener" aria-label="Falar com a Karen no WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i><span class="tip">Fale comigo</span></a>
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Imagem ampliada"><button type="button" aria-label="Fechar">×</button><img alt=""></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var PERF = window.__perf || {}; // chaves de diagnóstico ?perf= (vazio sem o parâmetro)
+  var $ = function(s,c){return (c||document).querySelector(s)};
+  var $$ = function(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))};
+
+  // PORTFÓLIO letra por letra
+  var word = $('#word'), txt = word.textContent; word.textContent = '';
+  txt.split('').forEach(function(ch,i){ var s = document.createElement('span'); s.textContent = ch; s.setAttribute('aria-hidden','true'); s.style.animationDelay = (i*0.07) + 's'; word.appendChild(s); });
+
+  // céu estrelado
+  var cv = $('#sky'), ctx = cv.getContext('2d'), stars = [], W, H, dpr = PERF.stars1x ? 1 : Math.min(devicePixelRatio || 1, 2), skip = false;
+  function size(){
+    W = innerWidth; H = innerHeight; cv.width = W*dpr; cv.height = H*dpr; ctx.setTransform(dpr,0,0,dpr,0,0);
+    var n = Math.round(W*H/5200); if (PERF.stars1x && W <= 640) n = Math.round(n/2); stars = [];
+    for (var i=0;i<n;i++) stars.push({x:Math.random()*W, y:Math.random()*H, r:Math.random()*1.3+.2, p:Math.random()*Math.PI*2, s:Math.random()*.02+.005, d:Math.random()*.4+.1, c:Math.random()<.18});
+  }
+  var scrollY0 = 0;
+  function draw(){
+    if (PERF.stars1x && !reduce && (skip = !skip)){ requestAnimationFrame(draw); return; } // stars1x: 30 fps
+    ctx.clearRect(0,0,W,H);
+    for (var i=0;i<stars.length;i++){
+      var st = stars[i]; st.p += PERF.stars1x ? st.s*2 : st.s;
+      var a = .35 + Math.sin(st.p)*.35 + .3;
+      var y = (st.y - scrollY0*st.d) % H; if (y < 0) y += H;
+      ctx.globalAlpha = Math.max(0, Math.min(1, a));
+      ctx.fillStyle = st.c ? '#cdb2ff' : '#ffffff';
+      ctx.beginPath(); ctx.arc(st.x, y, st.r, 0, 6.283); ctx.fill();
+    }
+    ctx.globalAlpha = 1;
+    if (!reduce) requestAnimationFrame(draw);
+  }
+  if (PERF.nostars) cv.style.display = 'none'; // nostars: sem canvas e sem laço de requestAnimationFrame
+  else { size(); addEventListener('resize', size); draw(); }
+
+  // progresso, barra fixa e parallax
+  var bar = $('#progress'), heroImg = $('#heroImg'), floaters = $$('[data-speed]'), contato = $('#contato'), ticking = false;
+  function frame(){
+    ticking = false;
+    var h = document.documentElement, y = h.scrollTop, max = h.scrollHeight - h.clientHeight;
+    scrollY0 = y;
+    bar.style.width = (max > 0 ? y/max*100 : 0) + '%';
+    if (!reduce && !PERF.noparallax && heroImg && y < innerHeight*1.5) heroImg.style.transform = 'translateY(' + (y*0.12).toFixed(1) + 'px) scale(1.06)';
+    if (!reduce && !PERF.noparallax) floaters.forEach(function(f){ var t = f.parentElement.getBoundingClientRect().top; f.style.transform = 'translateY(' + (t * +f.getAttribute('data-speed')).toFixed(1) + 'px)'; });
+    if (reduce && !PERF.nostars) draw();
+  }
+  addEventListener('scroll', function(){ if (!ticking){ ticking = true; requestAnimationFrame(frame); } }, {passive:true});
+  frame();
+
+  // entradas e contadores
+  function countUp(el){
+    if (reduce) return;
+    var target = +el.getAttribute('data-count'), t0 = null;
+    function step(t){ if(!t0) t0 = t; var p = Math.min((t-t0)/1600,1), e = 1 - Math.pow(1-p,3); el.textContent = Math.round(target*e).toLocaleString('pt-BR'); if(p<1) requestAnimationFrame(step); }
+    requestAnimationFrame(step);
+  }
+  if ('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(en){
+        if (!en.isIntersecting) return;
+        var el = en.target;
+        io.unobserve(el);                                   // cada elemento anima uma vez só
+        if (el.hasAttribute('data-count')) { countUp(el); return; }
+        el.classList.remove('pre'); el.classList.add('in'); // transição do estado .pre para o final
+        setTimeout(function(){ el.classList.remove('in'); }, 1300); // depois, devolve as transições próprias do elemento (hover)
+      });
+    }, {threshold:.18});
+    $$('[data-count]').forEach(function(el){ io.observe(el) });
+    // entradas só para o que começa abaixo da primeira tela; o que já está visível no carregamento não anima
+    if (!reduce && !PERF.noreveal) $$('.reveal,.stagger,#colors,#socialRow').forEach(function(el){
+      if (el.getBoundingClientRect().top >= innerHeight){ el.classList.add('pre'); io.observe(el); }
+    });
+  }
+
+  // animações infinitas decorativas só rodam com o elemento na tela
+  if (!reduce && 'IntersectionObserver' in window){
+    var lio = new IntersectionObserver(function(es){ es.forEach(function(en){ en.target.classList.toggle('loop-off', !en.isIntersecting); }); });
+    $$('.pulse,.hero-photo,.star3d,.sparkle,.corner-star').forEach(function(el){ lio.observe(el); });
+  }
+
+  // antes e depois
+  var cmp = $('#compare'), range = $('#compare-range');
+  function setPos(v){ cmp.style.setProperty('--pos', v + '%'); }
+  range.addEventListener('input', function(){ setPos(range.value) });
+  setPos(50);
+  if (!reduce && 'IntersectionObserver' in window){
+    var cio = new IntersectionObserver(function(en){
+      if (!en[0].isIntersecting) return; cio.disconnect();
+      var t0 = null;
+      function wig(t){ if(!t0) t0 = t; var p = (t-t0)/1600; if (p>1){ range.value = 50; setPos(50); return; } var v = 50 + Math.sin(p*Math.PI*2)*28*(1-p); range.value = v; setPos(v); requestAnimationFrame(wig); }
+      requestAnimationFrame(wig);
+    }, {threshold:.5});
+    cio.observe(cmp);
+  }
+
+  // zoom nas imagens
+  var lb = $('#lb'), lbImg = $('img', lb);
+  $$('.zoom').forEach(function(z){ z.addEventListener('click', function(){ lbImg.src = z.getAttribute('data-src'); lbImg.alt = $('img', z).alt; lb.classList.add('on'); }); });
+  function closeLb(){ lb.classList.remove('on'); }
+  lb.addEventListener('click', closeLb);
+  addEventListener('keydown', function(e){ if (e.key === 'Escape') closeLb(); });
+
+  // contatos ainda não preenchidos ficam escondidos
+  ['WHATSAPP','LINKEDIN'].forEach(function(k){ $$('a[href*="' + k + '_' + 'KAREN"]').forEach(function(el){ el.hidden = true; }); });
+
+  // copiar e-mail
+  var toastEl = $('#toast'), tt;
+  function toast(m){ toastEl.textContent = m; toastEl.classList.add('on'); clearTimeout(tt); tt = setTimeout(function(){ toastEl.classList.remove('on') }, 2200); }
+  $('#copy-email').addEventListener('click', function(){
+    var el = $('#email'), text = el.textContent;
+    function fb(){ var r = document.createRange(); r.selectNodeContents(el); var s = getSelection(); s.removeAllRanges(); s.addRange(r); toast('E-mail selecionado, é só copiar'); }
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(function(){ toast('E-mail copiado ✦') }, fb); else fb();
+  });
+})();
+</script>
+
+<script id="case1-video-js">
+/* Case 1 · vídeos reais nos celulares 1 e 2. Roda antes do carrossel para que as cópias clonadas herdem o vídeo. */
+(function(){
+  var stage = document.getElementById('phoneStage');
+  if (!stage || !('IntersectionObserver' in window)) return;
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return; // sem vídeo: fica a imagem do celular (= pôster)
+  var MAP = { 'img/case1_phone1.webp': 'case1_phone1', 'img/case1_phone2.webp': 'case1_phone2', 'img/case1_phone3.webp': 'case1_phone3' };
+  var dbg = window.__case1VideoDbg = { err: '' }; // lido pelo painel ?debug=1
+  stage.querySelectorAll('.phone-slide > img').forEach(function(img){
+    var name = MAP[img.getAttribute('src')]; if (!name) return;
+    var v = document.createElement('video');
+    v.className = 'phone-vid';
+    // tudo isto antes de qualquer load(): iOS só reproduz inline e sem gesto se o vídeo já nascer mudo e inline
+    // sem loop: o autoplay do carrossel avança quando o vídeo termina ('ended'); sem autoplay possível, o carrossel recomeça o vídeo
+    v.muted = true; v.loop = false; v.playsInline = true; v.preload = 'none';
+    ['muted','playsinline','webkit-playsinline'].forEach(function(a){ v.setAttribute(a, ''); });
+    v.setAttribute('preload', 'none'); v.setAttribute('aria-hidden', 'true');
+    v.setAttribute('width', '720'); v.setAttribute('height', '1280'); // proporção do pôster (720×1280)
+    v.setAttribute('poster', 'img/' + name + '_poster.webp');
+    var s = document.createElement('source'); s.setAttribute('data-src', 'video/' + name + '.mp4'); s.type = 'video/mp4'; v.appendChild(s); // só MP4 (H.264): compatível com iPhone
+    img.parentNode.appendChild(v);
+  });
+
+  var loaded = false, onScreen = false, current = null, held = false; // held: zoom do Case 1 aberto
+  function all(){ return Array.prototype.slice.call(stage.querySelectorAll('video.phone-vid')); }
+  function pauseAll(keep){ all().forEach(function(o){ if (o !== keep && !o.paused) o.pause(); }); }
+  function start(v){
+    if (!v || !v.isConnected || v._waiting || held || !loaded || !onScreen || document.hidden) return;
+    pauseAll(v); // nunca mais de um tocando
+    var p = v.play();
+    if (p && p.catch) p.catch(function(e){ dbg.err = 'play(): ' + ((e && (e.name + ' ' + e.message)) || e); }); // fica o pôster
+  }
+  function drop(v){ dbg.err = 'error: ' + ((v.error && ('code ' + v.error.code)) || 'source'); if (current === v) current = null; if (v.parentNode) v.parentNode.removeChild(v); } // fallback: fica a imagem
+
+  // Espera o fim do movimento do slide (transitionend do transform) ou 900 ms, o que vier primeiro
+  function afterMove(el, cb){
+    var done = false, t;
+    function fin(e){
+      if (e && (e.target !== el || e.propertyName !== 'transform')) return;
+      if (done) return; done = true; el.removeEventListener('transitionend', fin); clearTimeout(t); cb();
+    }
+    el.addEventListener('transitionend', fin); t = setTimeout(fin, 900);
+  }
+  stage.addEventListener('transitionend', function(e){
+    if (e.propertyName === 'transform' && e.target.classList && e.target.classList.contains('phone-slide')) dbg.te = Math.round(performance.now());
+  });
+
+  // Chamado pelo layout() do carrossel para cada slide com vídeo
+  window.case1Video = function(v, active){
+    var was = !!v._active; v._active = active;
+    if (active){
+      if (current !== v){                  // chegou ao centro: toca do começo só depois que o slide parar
+        current = v; v._waiting = true;
+        afterMove(v.parentNode, function(){
+          v._waiting = false; var r = v._resumeAt; v._resumeAt = null;
+          if (current !== v) return;         // já saiu do centro de novo
+          if (loaded){ try { v.currentTime = r != null ? r : 0; } catch(e){} } // r: segundo em que o zoom fechou
+          start(v);
+        });
+      } else if (v.paused) start(v);       // relayout (resize) com o mesmo slide no centro
+    } else {
+      if (current === v) current = null;
+      if (!v.paused) v.pause();            // saiu do centro: pausa já, sem mexer no currentTime
+      if (was) afterMove(v.parentNode, function(){
+        requestAnimationFrame(function(){ if (current !== v){ try { v.currentTime = 0; } catch(e){} } }); // vizinho volta ao quadro inicial (= pôster)
+      });
+    }
+  };
+
+  // Zoom do Case 1: com ele aberto, o vídeo do carrossel fica parado; ao fechar, segue do segundo em que o zoom estava
+  window.case1VideoHold = function(on, t){
+    held = !!on;
+    if (held){ pauseAll(null); return; }
+    var v = current; if (!v) return;
+    if (v._waiting){ v._resumeAt = t; return; }  // ainda deslizando: o afterMove aplica o segundo
+    if (t != null && loaded){ try { v.currentTime = t; } catch(e){} }
+    start(v);
+  };
+
+  // Lazy-load: os vídeos só são buscados quando o carrossel chega perto da tela
+  new IntersectionObserver(function(es, io){
+    if (!es.some(function(e){ return e.isIntersecting; })) return;
+    io.disconnect(); loaded = true;
+    all().forEach(function(v){
+      var ss = v.querySelectorAll('source');
+      ss[ss.length - 1].addEventListener('error', function(){ drop(v); });
+      v.addEventListener('error', function(){ drop(v); });
+      Array.prototype.forEach.call(ss, function(s){ s.src = s.getAttribute('data-src'); });
+      v.load();
+    });
+    start(current);
+  }, {rootMargin: '300px 0px'}).observe(stage);
+
+  // Pausa com a seção fora da tela ou com a aba oculta
+  new IntersectionObserver(function(es){ onScreen = es[0].isIntersecting; if (onScreen) start(current); else pauseAll(null); }, {threshold: .15}).observe(stage);
+  document.addEventListener('visibilitychange', function(){ if (document.hidden) pauseAll(null); else start(current); });
+})();
+</script>
+<script id="case1-carousel-js">
+/* Case 1 · carrossel de celulares sobrepostos (sem dependências) */
+(function(){
+  var stage = document.getElementById('phoneStage');
+  if (!stage) return;
+  var track = stage.querySelector('.phone-track');
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Com só 3 celulares, duplica o conjunto para o loop ficar contínuo (as cópias ficam ocultas para leitores de tela)
+  var originals = Array.prototype.slice.call(track.querySelectorAll('.phone-slide'));
+  var real = originals.length;
+  if (real < 5) originals.forEach(function(s){ var c = s.cloneNode(true); c.setAttribute('aria-hidden','true'); c.querySelectorAll('img,video').forEach(function(m){ m.alt = ''; }); track.appendChild(c); });
+  var slides = Array.prototype.slice.call(track.querySelectorAll('.phone-slide'));
+  var N = slides.length, active = 0;
+
+  // Pontinhos (um por celular real)
+  var dots = stage.querySelector('.phone-dots');
+  for (var i = 0; i < real; i++) (function(k){
+    var b = document.createElement('button'); b.type = 'button'; b.setAttribute('aria-label','Vídeo ' + (k+1));
+    b.addEventListener('click', function(){ go(nearest(k)); hold(); });
+    dots.appendChild(b);
+  })(i);
+
+  function nearest(k){ // índice do slide com o mesmo conteúdo mais próximo do ativo
+    var best = k, bestD = 99;
+    for (var j = k; j < N; j += real){ var d = Math.abs(offset(j)); if (d < bestD){ bestD = d; best = j; } }
+    return best;
+  }
+  function offset(i){ var d = ((i - active) % N + N) % N; if (d > N/2) d -= N; return d; }
+
+  function layout(){
+    var pw = slides[0].offsetWidth, mobile = innerWidth <= 640;
+    slides.forEach(function(s, i){
+      var d = offset(i), a = Math.abs(d), sign = d < 0 ? -1 : 1, st;
+      // quem troca de lado por trás (do fundo da esquerda para o fundo da direita) pula sem animar, para não cruzar a cena
+      var jump = s._d !== undefined && a >= 2 && Math.abs(s._d) >= 2 && Math.sign(s._d) !== Math.sign(d);
+      s._d = d;
+      if (jump) s.style.transition = 'none';
+      if (d === 0)      st = {x:0, s:1, o:1, b:1, z:30};
+      else if (a === 1) st = {x:sign*pw*(mobile ? .5 : .64), s:.84, o:1, b:.6, z:20};
+      else if (a === 2) st = {x:sign*pw*(mobile ? .9 : 1.16), s:.7, o:(mobile || real < 5) ? 0 : .38, b:.42, z:10};
+      else              st = {x:sign*pw*1.3, s:.6, o:0, b:.4, z:1};
+      s.style.setProperty('--x', st.x.toFixed(1) + 'px');
+      s.style.setProperty('--s', st.s);
+      s.style.setProperty('--o', st.o);
+      s.style.setProperty('--b', st.b);
+      s.style.setProperty('--z', st.z);
+      if (jump){ void s.offsetWidth; s.style.transition = ''; }
+      s.classList.toggle('is-active', d === 0);
+      var v = s.querySelector('video');
+      if (v){ if (window.case1Video) window.case1Video(v, d === 0); else if (d === 0){ v.muted = true; v.playsInline = true; var p = v.play(); if (p && p.catch) p.catch(function(){}); } else v.pause(); }
+    });
+    var cur = active % real;
+    Array.prototype.forEach.call(dots.children, function(b, k){ b.setAttribute('aria-current', k === cur ? 'true' : 'false'); });
+  }
+  function go(i){ var n = ((i % N) + N) % N; if (n !== active) activeSince = Date.now(); active = n; layout(); }
+  function step(dir){ go(active + dir); }
+
+  // Setas e teclado
+  stage.querySelectorAll('.phone-nav').forEach(function(b){ b.addEventListener('click', function(){ step(+b.getAttribute('data-dir')); hold(); }); });
+  stage.addEventListener('keydown', function(e){
+    if (e.key === 'ArrowRight'){ step(1); hold(); e.preventDefault(); }
+    if (e.key === 'ArrowLeft'){ step(-1); hold(); e.preventDefault(); }
+  });
+
+  // Arrastar (mouse e toque) e clique
+  var sx = 0, sy = 0, dx = 0, down = false, moved = false, far = false;
+  track.addEventListener('pointerdown', function(e){ down = true; moved = false; far = false; sx = e.clientX; sy = e.clientY; dx = 0; });
+  addEventListener('pointermove', function(e){
+    if (!down) return;
+    dx = e.clientX - sx;
+    if (Math.abs(dx) >= 10 || Math.abs(e.clientY - sy) >= 10) far = true; // movimento de 10 px ou mais não é toque
+    if (!moved && Math.abs(dx) > 10 && Math.abs(dx) > Math.abs(e.clientY - sy)){ moved = true; track.classList.add('dragging'); }
+  });
+  addEventListener('pointerup', function(){
+    if (!down) return; down = false; track.classList.remove('dragging');
+    if (moved && Math.abs(dx) > 40){ step(dx < 0 ? 1 : -1); hold(); }
+  });
+  addEventListener('pointercancel', function(){ down = false; track.classList.remove('dragging'); });
+  // Celular do centro: o toque abre o zoom do Case 1 (celular grande com o vídeo seguindo do segundo atual)
+  function phones(){
+    return originals.map(function(o){
+      var img = o.querySelector('img'), src = o.querySelector('video.phone-vid source'), v = o.querySelector('video.phone-vid');
+      return {src: img.getAttribute('src'), alt: img.alt, video: src ? src.getAttribute('data-src') : null, poster: v ? v.getAttribute('poster') : null};
+    });
+  }
+  function zoom(s){
+    if (window.case1Zoom){
+      var v = activeVideo(), t = v && !v._waiting ? v.currentTime : 0;
+      if (window.case1VideoHold) window.case1VideoHold(true); // vídeo do carrossel parado enquanto o zoom está aberto
+      window.case1Zoom.open(phones(), active % real, t, {
+        change: function(k){ go(nearest(k)); },                // o carrossel acompanha por trás
+        close: function(k, tt){ if (window.case1VideoHold) window.case1VideoHold(false, tt); }
+      });
+      return;
+    }
+    var lb = document.getElementById('lb'); // sem o componente: zoom do site, se existir
+    if (lb){ var img = lb.querySelector('img'), src = s.querySelector('img'); if (img && src){ img.src = src.getAttribute('src'); img.alt = src.alt; lb.classList.add('on'); } }
+  }
+  slides.forEach(function(s, i){
+    s.addEventListener('click', function(){
+      if (moved || far) return;                            // arrastar nunca abre o zoom
+      if (offset(i) !== 0){ go(i); hold(); return; }       // celular lateral: só vem para o centro
+      zoom(s);
+    });
+  });
+
+  // Autoplay suave: só com a seção na tela, aba visível e sem interação recente.
+  // Celular com vídeo: avança quando o vídeo termina ('ended'), para cada vídeo tocar inteiro.
+  // Celular sem vídeo, vídeo com erro ou play() recusado: avança pelo intervalo de 4,5 s (fallback).
+  var timer = null, visible = false, hovering = false, holdUntil = 0, activeSince = Date.now();
+  function hold(){ holdUntil = Date.now() + 9000; }
+  var lastScroll = 0; addEventListener('scroll', function(){ lastScroll = Date.now(); }, {passive:true}); // não troca de slide com a página rolando
+  function free(){ return !(window.case1Zoom && window.case1Zoom.isOpen()) && visible && !hovering && !document.hidden && !down && !stage.contains(document.activeElement); }
+  function activeVideo(){ var v = slides[active].querySelector('video.phone-vid'); return v && v.isConnected ? v : null; }
+  function tick(){
+    if (Date.now() - activeSince < 4500) return;
+    var v = activeVideo();
+    if (v && (!v.paused || v._waiting)) return;              // vídeo tocando: quem avança é o 'ended'
+    if (free() && Date.now() > holdUntil && Date.now() - lastScroll > 600) step(1);
+  }
+  function ended(v){
+    if (!v._active || reduce) return;
+    if (free() && Date.now() - lastScroll > 600) step(1);
+    else if (visible && !document.hidden && (down || Date.now() - lastScroll <= 600)) setTimeout(function(){ if (v._active && v.ended) ended(v); }, 700); // rolando/arrastando: tenta de novo já já
+    else { try { v.currentTime = 0; } catch(e){} var p = v.play(); if (p && p.catch) p.catch(function(){}); } // mouse em cima ou foco no carrossel: recomeça (como loop)
+  }
+  slides.forEach(function(s){ var v = s.querySelector('video.phone-vid'); if (v) v.addEventListener('ended', function(){ ended(v); }); });
+  if (!reduce){
+    timer = setInterval(tick, 500);
+    stage.addEventListener('mouseenter', function(){ hovering = true; });
+    stage.addEventListener('mouseleave', function(){ hovering = false; });
+    if ('IntersectionObserver' in window) new IntersectionObserver(function(es){ visible = es[0].isIntersecting; }, {threshold:.35}).observe(stage);
+    else visible = true;
+  }
+
+  var rt; addEventListener('resize', function(){ clearTimeout(rt); rt = setTimeout(layout, 120); });
+  layout();
+})();
+</script>
+<script id="case1-zoom-js">
+/* Case 1 · zoom navegável dos celulares. window.case1Zoom.open(celulares, índice, segundo, {change, close}):
+   celular grande com o vídeo tocando a partir do segundo atual; arraste (toque ou mouse), setas e ←/→ vão ao
+   celular anterior/próximo (só os 3 do Case 1) e o vídeo dele começa na hora; resistência nas pontas; vertical não
+   troca. Fecha com ×, toque fora do celular ou Esc e devolve o celular e o segundo em que o vídeo estava.
+   Enquanto aberto: rolagem bloqueada e nenhum outro vídeo da página tocando. */
+(function(){
+  var el = null, strip, items = [], dotsEl, countEl, prevB, nextB, closeB, list = [], cur = 0, cb = {}, isOpen = false, g = null, suppress = false, others = [];
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function build(){
+    el = document.createElement('div'); el.className = 'c1-zoom';
+    el.setAttribute('role', 'dialog'); el.setAttribute('aria-modal', 'true'); el.setAttribute('aria-label', 'Vídeos do Case 1 ampliados');
+    el.innerHTML = '<div class="c1-zoom-strip"></div><button type="button" class="c1-zoom-close" aria-label="Fechar">×</button>' +
+      '<button type="button" class="c1-zoom-arrow prev" aria-label="Vídeo anterior">‹</button><button type="button" class="c1-zoom-arrow next" aria-label="Próximo vídeo">›</button>' +
+      '<span class="c1-zoom-count" aria-live="polite"></span><div class="c1-zoom-dots" aria-hidden="true"></div>';
+    document.body.appendChild(el);
+    strip = el.querySelector('.c1-zoom-strip'); dotsEl = el.querySelector('.c1-zoom-dots'); countEl = el.querySelector('.c1-zoom-count');
+    prevB = el.querySelector('.prev'); nextB = el.querySelector('.next'); closeB = el.querySelector('.c1-zoom-close');
+    closeB.addEventListener('click', close);
+    prevB.addEventListener('click', function(){ go(cur - 1); });
+    nextB.addEventListener('click', function(){ go(cur + 1); });
+    addEventListener('keydown', function(e){
+      if (!isOpen) return;
+      if (e.key === 'Escape') close();
+      else if (e.key === 'ArrowRight'){ e.preventDefault(); go(cur + 1); }
+      else if (e.key === 'ArrowLeft'){ e.preventDefault(); go(cur - 1); }
+    });
+    addEventListener('resize', function(){ if (isOpen) place(0, true); });
+    // Arraste: só vira horizontal depois de 8 px na horizontal; gesto vertical não troca de celular
+    strip.addEventListener('pointerdown', function(e){
+      if (e.pointerType === 'mouse' && e.button !== 0) return;
+      suppress = false;
+      g = {id: e.pointerId, x: e.clientX, y: e.clientY, dx: 0, h: false, done: false, lx: e.clientX, lt: performance.now(), v: 0};
+    });
+    strip.addEventListener('pointermove', function(e){
+      if (!g || e.pointerId !== g.id || g.done) return;
+      var dx = e.clientX - g.x, dy = e.clientY - g.y, now = performance.now();
+      if (!g.h){
+        if (Math.abs(dx) > 8 && Math.abs(dx) > Math.abs(dy)){ g.h = true; strip.classList.add('dragging'); try { strip.setPointerCapture(e.pointerId); } catch(err){} }
+        else if (Math.abs(dy) > 8){ g = null; return; }
+      }
+      if (g.h){
+        if (now > g.lt){ g.v = (e.clientX - g.lx) / (now - g.lt); g.lx = e.clientX; g.lt = now; }
+        g.dx = ((cur === 0 && dx > 0) || (cur === list.length - 1 && dx < 0)) ? dx / 3 : dx; // resistência elástica nas pontas
+        place(g.dx, true);
+      }
+    });
+    function end(e){
+      if (!g || e.pointerId !== g.id || g.done) return;
+      var gs = g; gs.done = true; g = null;
+      if (!gs.h) return;
+      suppress = true; strip.classList.remove('dragging');
+      var W = el.clientWidth, fast = Math.abs(gs.v) > .5 && Math.abs(gs.dx) > 20;
+      if (Math.abs(gs.dx) > W * .15 || fast) go(cur + (gs.dx < 0 ? 1 : -1)); else place(0);
+    }
+    strip.addEventListener('pointerup', end);
+    strip.addEventListener('pointercancel', end);
+    strip.addEventListener('lostpointercapture', function(e){ if (e.target === strip) end(e); }); // só a captura do próprio strip encerra o gesto
+    // Toque/clique fora do celular fecha; o click que vem depois de um arraste é ignorado
+    strip.addEventListener('click', function(e){
+      if (suppress){ suppress = false; return; }
+      if (!e.target.closest('.c1-zoom-phone')) close();
+    });
+  }
+  function place(dx, instant){
+    var W = el.clientWidth;
+    if (instant) strip.style.transition = 'none'; else strip.style.transition = '';
+    strip.style.transform = 'translateX(' + (-cur * W + (dx || 0)) + 'px)';
+    if (instant){ void strip.offsetWidth; strip.style.transition = ''; }
+  }
+  function load(i){ var it = items[i]; if (it && !it.img.getAttribute('src')) it.img.src = list[i].src; }
+  // Toca só o vídeo do celular atual, a partir do segundo t; os outros ficam parados
+  function play(i, t){
+    items.forEach(function(it, k){ if (k !== i && it.v && !it.v.paused) it.v.pause(); });
+    var v = items[i] && items[i].v; if (!v) return;
+    if (!v.getAttribute('src')) v.src = list[i].video;
+    function seek(){ try { v.currentTime = t || 0; } catch(e){} }
+    if (v.readyState >= 1) seek(); else v.addEventListener('loadedmetadata', seek, {once: true});
+    var p = v.play(); if (p && p.catch) p.catch(function(){}); // recusado: fica o pôster
+  }
+  function go(i, instant, t){
+    var n = Math.max(0, Math.min(list.length - 1, i)), changed = n !== cur; cur = n;
+    load(cur); load(cur - 1); load(cur + 1);
+    place(0, instant || reduce);
+    countEl.textContent = (cur + 1) + ' / ' + list.length;
+    Array.prototype.forEach.call(dotsEl.children, function(d, k){ d.classList.toggle('on', k === cur); });
+    prevB.hidden = cur === 0; nextB.hidden = cur === list.length - 1;
+    items.forEach(function(it, k){ it.box.setAttribute('aria-hidden', k === cur ? 'false' : 'true'); });
+    if (changed){ play(cur, t || 0); if (cb.change) cb.change(cur); } // o carrossel da página acompanha por trás
+  }
+  function open(phones, i, t, callbacks){
+    if (!el) build();
+    list = phones; cb = callbacks || {}; strip.innerHTML = ''; dotsEl.innerHTML = ''; items = [];
+    list.forEach(function(ph){
+      var box = document.createElement('div'); box.className = 'c1-zoom-item';
+      var phone = document.createElement('div'); phone.className = 'c1-zoom-phone';
+      var img = document.createElement('img'); img.alt = ph.alt || ''; img.decoding = 'async'; img.draggable = false;
+      phone.appendChild(img);
+      var v = null;
+      if (ph.video){
+        v = document.createElement('video'); v.className = 'c1-zoom-vid';
+        v.muted = true; v.loop = true; v.playsInline = true; v.preload = 'auto';
+        ['muted','loop','playsinline','webkit-playsinline'].forEach(function(a){ v.setAttribute(a, ''); });
+        v.setAttribute('aria-hidden', 'true'); v.setAttribute('width', '720'); v.setAttribute('height', '1280');
+        if (ph.poster) v.setAttribute('poster', ph.poster);
+        v.addEventListener('error', function(){ if (v.parentNode) v.parentNode.removeChild(v); }); // fallback: fica a arte
+        phone.appendChild(v);
+      }
+      box.appendChild(phone); strip.appendChild(box); items.push({box: box, img: img, v: v});
+      dotsEl.appendChild(document.createElement('i'));
+    });
+    // um vídeo por vez na página inteira: o que estiver tocando fora do zoom para e volta ao fechar
+    others = Array.prototype.filter.call(document.querySelectorAll('video'), function(o){ return !o.paused && !el.contains(o); });
+    others.forEach(function(o){ o.pause(); });
+    isOpen = true; cur = -1;
+    document.documentElement.style.overflow = 'hidden';
+    go(i, true, t);
+    void el.offsetWidth; el.classList.add('on');
+    closeB.focus({preventScroll: true});
+  }
+  function close(){
+    if (!isOpen) return; isOpen = false; g = null;
+    var v = items[cur] && items[cur].v, t = v && v.isConnected ? v.currentTime : null;
+    items.forEach(function(it){ if (it.v && !it.v.paused) it.v.pause(); });
+    el.classList.remove('on');
+    document.documentElement.style.overflow = '';
+    others.forEach(function(o){ var p = o.play(); if (p && p.catch) p.catch(function(){}); }); others = [];
+    if (cb.close) cb.close(cur, t);
+  }
+  window.case1Zoom = {open: open, close: close, isOpen: function(){ return isOpen; }};
+})();
+</script>
+<script id="pano-zoom-js">
+/* Cases 2 e 3 · zoom navegável. window.panoZoom.open(artes, índice, aoTrocar): cada case passa só as suas 6 artes.
+   Arraste (toque ou mouse) com a imagem acompanhando; solta e encaixa (15% da largura ou gesto rápido); resistência
+   nas pontas; vertical não troca. Setas, ←/→ e contador só no computador. Fecha com ×, toque fora da imagem ou Esc. */
+(function(){
+  var el = null, strip, items = [], dotsEl, countEl, prevB, nextB, closeB, arts = [], cur = 0, onChange = null, isOpen = false, g = null, suppress = false;
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function build(){
+    el = document.createElement('div'); el.className = 'pano-zoom';
+    el.setAttribute('role', 'dialog'); el.setAttribute('aria-modal', 'true'); el.setAttribute('aria-label', 'Artes ampliadas');
+    el.innerHTML = '<div class="pano-zoom-strip"></div><button type="button" class="pano-zoom-close" aria-label="Fechar">×</button>' +
+      '<button type="button" class="pano-zoom-arrow prev" aria-label="Arte anterior">‹</button><button type="button" class="pano-zoom-arrow next" aria-label="Próxima arte">›</button>' +
+      '<span class="pano-zoom-count" aria-live="polite"></span><div class="pano-zoom-dots" aria-hidden="true"></div>';
+    document.body.appendChild(el);
+    strip = el.querySelector('.pano-zoom-strip'); dotsEl = el.querySelector('.pano-zoom-dots'); countEl = el.querySelector('.pano-zoom-count');
+    prevB = el.querySelector('.prev'); nextB = el.querySelector('.next'); closeB = el.querySelector('.pano-zoom-close');
+    closeB.addEventListener('click', close);
+    prevB.addEventListener('click', function(){ go(cur - 1); });
+    nextB.addEventListener('click', function(){ go(cur + 1); });
+    addEventListener('keydown', function(e){
+      if (!isOpen) return;
+      if (e.key === 'Escape') close();
+      else if (e.key === 'ArrowRight'){ e.preventDefault(); go(cur + 1); }
+      else if (e.key === 'ArrowLeft'){ e.preventDefault(); go(cur - 1); }
+    });
+    addEventListener('resize', function(){ if (isOpen) place(0, true); });
+    // Arraste: só vira horizontal depois de 8 px na horizontal; gesto vertical não troca de arte
+    strip.addEventListener('pointerdown', function(e){
+      if (e.pointerType === 'mouse' && e.button !== 0) return;
+      suppress = false;
+      g = {id: e.pointerId, x: e.clientX, y: e.clientY, dx: 0, h: false, done: false, lx: e.clientX, lt: performance.now(), v: 0};
+    });
+    strip.addEventListener('pointermove', function(e){
+      if (!g || e.pointerId !== g.id || g.done) return;
+      var dx = e.clientX - g.x, dy = e.clientY - g.y, now = performance.now();
+      if (!g.h){
+        if (Math.abs(dx) > 8 && Math.abs(dx) > Math.abs(dy)){ g.h = true; strip.classList.add('dragging'); try { strip.setPointerCapture(e.pointerId); } catch(err){} }
+        else if (Math.abs(dy) > 8){ g = null; return; }
+      }
+      if (g.h){
+        if (now > g.lt){ g.v = (e.clientX - g.lx) / (now - g.lt); g.lx = e.clientX; g.lt = now; }
+        g.dx = ((cur === 0 && dx > 0) || (cur === arts.length - 1 && dx < 0)) ? dx / 3 : dx; // resistência elástica nas pontas
+        place(g.dx, true);
+      }
+    });
+    function end(e){
+      if (!g || e.pointerId !== g.id || g.done) return;
+      var gs = g; gs.done = true; g = null;
+      if (!gs.h) return;
+      suppress = true; strip.classList.remove('dragging');
+      var W = el.clientWidth, fast = Math.abs(gs.v) > .5 && Math.abs(gs.dx) > 20;
+      if (Math.abs(gs.dx) > W * .15 || fast) go(cur + (gs.dx < 0 ? 1 : -1)); else place(0);
+    }
+    strip.addEventListener('pointerup', end);
+    strip.addEventListener('pointercancel', end);
+    strip.addEventListener('lostpointercapture', function(e){ if (e.target === strip) end(e); }); // só a captura do próprio strip encerra o gesto
+    // Toque/clique fora da imagem fecha; o click que vem depois de um arraste é ignorado
+    strip.addEventListener('click', function(e){
+      if (suppress){ suppress = false; return; }
+      if (!e.target.closest('img')) close();
+    });
+  }
+  function place(dx, instant){
+    var W = el.clientWidth;
+    if (instant) strip.style.transition = 'none'; else strip.style.transition = '';
+    strip.style.transform = 'translateX(' + (-cur * W + (dx || 0)) + 'px)';
+    if (instant){ void strip.offsetWidth; strip.style.transition = ''; }
+  }
+  function load(i){ var it = items[i]; if (it && !it.img.getAttribute('src')) it.img.src = arts[i].src; }
+  function go(i, instant){
+    var n = Math.max(0, Math.min(arts.length - 1, i)), changed = n !== cur; cur = n;
+    load(cur); load(cur - 1); load(cur + 1);              // a atual e as vizinhas já carregadas: troca instantânea
+    place(0, instant || reduce);
+    countEl.textContent = (cur + 1) + ' / ' + arts.length;
+    Array.prototype.forEach.call(dotsEl.children, function(d, k){ d.classList.toggle('on', k === cur); });
+    prevB.hidden = cur === 0; nextB.hidden = cur === arts.length - 1;
+    items.forEach(function(it, k){ it.box.setAttribute('aria-hidden', k === cur ? 'false' : 'true'); });
+    if (changed && onChange) onChange(cur);                 // o carrossel da página acompanha por trás
+  }
+  function open(list, i, cb){
+    if (!el) build();
+    arts = list; onChange = cb; strip.innerHTML = ''; dotsEl.innerHTML = ''; items = [];
+    arts.forEach(function(a){
+      var box = document.createElement('div'); box.className = 'pano-zoom-item';
+      var img = document.createElement('img'); img.alt = a.alt || ''; img.decoding = 'async'; img.draggable = false;
+      box.appendChild(img); strip.appendChild(box); items.push({box: box, img: img});
+      dotsEl.appendChild(document.createElement('i'));
+    });
+    isOpen = true; cur = -1;
+    document.documentElement.style.overflow = 'hidden';
+    go(i, true);
+    void el.offsetWidth; el.classList.add('on');
+    closeB.focus({preventScroll: true});
+  }
+  function close(){
+    if (!isOpen) return; isOpen = false; g = null;
+    el.classList.remove('on');
+    document.documentElement.style.overflow = '';
+  }
+  window.panoZoom = {open: open, close: close, isOpen: function(){ return isOpen; }};
+})();
+</script>
+<script id="cases-pano-js">
+/* Cases 2 e 3 · polaroides sobrepostas. Cada .pano tem estado próprio. Arraste horizontal (toque ou mouse) passa uma arte;
+   a rolagem vertical da página segue nativa (touch-action: pan-y). Toque na próxima arte avança; na atual, abre o zoom. */
+(function(){
+  Array.prototype.forEach.call(document.querySelectorAll('.pano'), function(pano){
+    var stage = pano.querySelector('.pano-track');
+    var slides = Array.prototype.slice.call(stage.querySelectorAll('.pano-slide'));
+    var N = slides.length, dots = pano.querySelector('.pano-dots'), count = pano.querySelector('.pano-count');
+    var prev = pano.querySelector('.pano-arrow.prev'), next = pano.querySelector('.pano-arrow.next'), active = 0;
+    if (!N) return;
+
+    // Tamanho da polaroide pela altura do palco (mesma altura do Case 1), limitado a 84% da largura no celular
+    var ar = (+slides[0].querySelector('img').getAttribute('width')) / (+slides[0].querySelector('img').getAttribute('height'));
+    function geo(){
+      var W = stage.clientWidth, H = stage.clientHeight, pad = Math.round(Math.max(5, Math.min(8, W * .014)));
+      var ch = H * .86, cw = (ch - 2 * pad) * ar + 2 * pad;
+      if (cw > W * .84){ cw = W * .84; ch = (cw - 2 * pad) / ar + 2 * pad; }
+      return {W: W, H: H, cw: Math.round(cw), ch: ch, pad: pad};
+    }
+    // Posição de cada arte conforme a distância d até a atual: a atual no centro, a próxima pequena POR CIMA à direita
+    // (no celular, cortada pela borda), a anterior por baixo à esquerda, só parcialmente visível
+    function place(d, q){
+      var cx = q.W / 2, ax = cx - q.cw / 2, ay = (q.H - q.ch) / 2;
+      if (d === 0)  return {x: ax, y: ay, s: 1, r: -1.5, z: 20, o: 1};
+      if (d === 1)  return {x: cx + q.cw * .38, y: q.H * .03, s: .6, r: 3, z: 30, o: 1};
+      if (d === -1) return {x: cx - q.cw * .5 - q.cw * .85 * .75, y: q.H * .08, s: .85, r: -3, z: 10, o: 1};
+      return d > 0 ? {x: cx + q.cw * .38 + q.cw * .36, y: q.H * .03, s: .45, r: 3, z: 5, o: 0}
+                   : {x: cx - q.cw * .5 - q.cw * 1.4, y: q.H * .08, s: .85, r: -3, z: 5, o: 0};
+    }
+    function layout(drag){
+      var q = geo(), f = drag ? Math.max(-1, Math.min(1, -drag / q.W)) : 0;
+      slides.forEach(function(s, i){
+        var d = i - active, a = place(d, q), b = place(d - (f > 0 ? 1 : -1), q), t = Math.abs(f), p = {};
+        ['x','y','s','r','o'].forEach(function(k){ p[k] = a[k] + (b[k] - a[k]) * t; });  // no arraste, interpola até a posição vizinha
+        s.style.setProperty('--cw', q.cw + 'px');
+        s.style.setProperty('--pad', q.pad + 'px');
+        s.style.setProperty('--x', p.x.toFixed(1) + 'px');
+        s.style.setProperty('--y', p.y.toFixed(1) + 'px');
+        s.style.setProperty('--s', p.s.toFixed(3));
+        s.style.setProperty('--r', p.r.toFixed(2) + 'deg');
+        s.style.setProperty('--o', p.o.toFixed(2));
+        s.style.setProperty('--z', t > .5 ? b.z : a.z);
+        s.classList.toggle('is-active', d === 0);
+        if (Math.abs(d) <= 1) s.removeAttribute('aria-hidden'); else s.setAttribute('aria-hidden', 'true');
+      });
+      // setas sobre as bordas da arte atual, na altura do meio (como no Instagram)
+      var c = place(0, q), my = c.y + q.ch / 2 + 10;
+      prev.style.setProperty('--ax', (c.x + 10).toFixed(1) + 'px'); prev.style.setProperty('--ay', my.toFixed(1) + 'px');
+      next.style.setProperty('--ax', (c.x + q.cw - 40).toFixed(1) + 'px'); next.style.setProperty('--ay', my.toFixed(1) + 'px');
+    }
+    function go(i){
+      active = Math.max(0, Math.min(N - 1, i)); layout(0);
+      Array.prototype.forEach.call(dots.children, function(b, j){ b.setAttribute('aria-current', j === active ? 'true' : 'false'); });
+      count.textContent = (active + 1) + '/' + N; slides[active].appendChild(count);
+      prev.hidden = active === 0; next.hidden = active === N - 1;
+    }
+
+    for (var k = 0; k < N; k++) (function(k){
+      var b = document.createElement('button'); b.type = 'button'; b.setAttribute('aria-label', 'Arte ' + (k + 1));
+      b.addEventListener('click', function(){ go(k); });
+      dots.appendChild(b);
+    })(k);
+    [prev, next].forEach(function(b){ b.addEventListener('click', function(){ go(active + (+b.getAttribute('data-dir'))); }); });
+    stage.setAttribute('tabindex', '0');
+    stage.addEventListener('keydown', function(e){
+      if (e.key === 'ArrowRight'){ e.preventDefault(); go(active + 1); }
+      else if (e.key === 'ArrowLeft'){ e.preventDefault(); go(active - 1); }
+    });
+
+    // Arraste (toque e mouse). Só vira arraste horizontal depois de 8 px na horizontal; vertical fica com a página.
+    var g = null, suppress = false;
+    stage.addEventListener('pointerdown', function(e){
+      if (e.pointerType === 'mouse' && e.button !== 0) return;
+      suppress = false;
+      g = {id: e.pointerId, x: e.clientX, y: e.clientY, dx: 0, h: false, done: false};
+    });
+    stage.addEventListener('pointermove', function(e){
+      if (!g || e.pointerId !== g.id || g.done) return;
+      var dx = e.clientX - g.x, dy = e.clientY - g.y;
+      if (!g.h){
+        if (Math.abs(dx) > 8 && Math.abs(dx) > Math.abs(dy)){ g.h = true; stage.classList.add('dragging'); try { stage.setPointerCapture(e.pointerId); } catch(err){} }
+        else if (Math.abs(dy) > 8){ g = null; return; }   // gesto vertical: rolagem da página
+      }
+      if (g.h){
+        // nas pontas, resistência (não há arte antes da primeira nem depois da última)
+        g.dx = ((active === 0 && dx > 0) || (active === N - 1 && dx < 0)) ? dx / 4 : dx;
+        layout(g.dx);
+      }
+    });
+    // Fim do gesto, idempotente: pointerup, pointercancel e lostpointercapture podem chegar juntos; só o primeiro age
+    function end(e){
+      if (!g || e.pointerId !== g.id || g.done) return;
+      var gs = g; gs.done = true; g = null;
+      if (!gs.h) return;
+      suppress = true;                                   // o click depois de um arraste não abre o zoom nem avança
+      stage.classList.remove('dragging');
+      if (Math.abs(gs.dx) > stage.clientWidth * .15) go(active + (gs.dx < 0 ? 1 : -1)); else go(active);
+    }
+    stage.addEventListener('pointerup', end);
+    stage.addEventListener('pointercancel', end);
+    stage.addEventListener('lostpointercapture', function(e){ if (e.target === stage) end(e); });
+
+    // Clique: depois de arraste, engole; na próxima/anterior, navega; na atual, abre o zoom do site
+    stage.addEventListener('click', function(e){
+      if (suppress){ suppress = false; e.stopPropagation(); e.preventDefault(); return; }
+      var s = e.target.closest('.pano-slide'); if (!s) return;
+      var i = slides.indexOf(s);
+      if (i !== active){ go(i); return; }
+      if (window.panoZoom){
+        window.panoZoom.open(slides.map(function(x){ var im = x.querySelector('img'); return {src: im.getAttribute('src'), alt: im.alt}; }), i,
+          function(k){ go(k); });                          // o carrossel da página acompanha a arte do zoom
+        return;
+      }
+      var lb = document.getElementById('lb'), img = lb && lb.querySelector('img'), src = s.querySelector('img');
+      if (!img || !src) return;
+      img.src = src.getAttribute('src'); img.alt = src.alt; lb.classList.add('on');
+    });
+
+    var rt; addEventListener('resize', function(){ clearTimeout(rt); rt = setTimeout(function(){ layout(0); }, 120); });
+    go(0);
+  });
+})();
+</script>
+<script id="mutti-polpa-js">
+/* Mutti · vídeo da Polpa: só toca visível na tela e com a aba aberta; pausa fora da tela. Com movimento reduzido: fica só a capa. */
+(function(){
+  var v = document.querySelector('video.mutti-polpa'); if (!v) return;
+  v.muted = true; v.playsInline = true;
+  var on = false, auto = true, aberto = false, zEl = null, zv = null, btn = v.closest('.polpa-btn');
+  function play(el){ var p = el.play(); if (p && p.catch) p.catch(function(){}); }
+  function sync(){
+    var zoomAberto = aberto || (window.case1Zoom && window.case1Zoom.isOpen()); // um vídeo por vez
+    if (auto && on && !document.hidden && !zoomAberto) play(v); else if (!v.paused) v.pause();
+  }
+  // Zoom do vídeo (como o Case 1): abre ampliado TOCANDO a partir do mesmo segundo; ao fechar, a página segue de onde o zoom parou
+  function build(){
+    zEl = document.createElement('div'); zEl.className = 'polpa-zoom';
+    zEl.setAttribute('role', 'dialog'); zEl.setAttribute('aria-modal', 'true'); zEl.setAttribute('aria-label', 'Vídeo ampliado: Mutti Polpa');
+    zEl.innerHTML = '<button type="button" class="polpa-zoom-close" aria-label="Fechar">×</button><video class="polpa-zoom-vid" muted playsinline webkit-playsinline loop preload="auto"></video>';
+    document.body.appendChild(zEl);
+    zv = zEl.querySelector('video'); zv.muted = true; zv.playsInline = true; zv.poster = v.getAttribute('poster');
+    zv.src = v.currentSrc || v.getAttribute('src');
+    zEl.querySelector('.polpa-zoom-close').addEventListener('click', close);
+    zEl.addEventListener('click', function(e){ if (e.target !== zv) close(); });   // toque fora do vídeo fecha
+    addEventListener('keydown', function(e){ if (aberto && e.key === 'Escape') close(); });
+  }
+  function seek(el, t){ if (el.readyState >= 1){ try { el.currentTime = t; } catch(e){} } else el.addEventListener('loadedmetadata', function f(){ el.removeEventListener('loadedmetadata', f); try { el.currentTime = t; } catch(e){} }); }
+  function open(){
+    if (!zEl) build();
+    aberto = true; var t = v.currentTime || 0; v.pause();
+    seek(zv, t); play(zv);                                         // play() dentro do toque: o iPhone permite
+    document.documentElement.style.overflow = 'hidden';
+    void zEl.offsetWidth; zEl.classList.add('on');
+    zEl.querySelector('.polpa-zoom-close').focus({preventScroll: true});
+  }
+  function close(){
+    if (!aberto) return; aberto = false;
+    zEl.classList.remove('on'); document.documentElement.style.overflow = '';
+    var t = zv.currentTime; zv.pause(); seek(v, t); sync();
+    if (btn) btn.focus({preventScroll: true});
+  }
+  if (btn) btn.addEventListener('click', open);
+  window.polpaZoom = {open: open, close: close, isOpen: function(){ return aberto; }};
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)){ v.removeAttribute('autoplay'); v.autoplay = false; v.pause(); auto = false; return; }
+  new IntersectionObserver(function(es){ on = es[0].isIntersecting; sync(); }, {threshold: .25}).observe(v);
+  document.addEventListener('visibilitychange', sync);
+})();
+</script>
+<script id="case1-debug-js">
+/* Case 1 · painel de diagnóstico. Só existe com ?debug=1 na URL; sem o parâmetro, nada aqui roda. */
+(function(){
+  if (new URLSearchParams(location.search).get('debug') !== '1') return;
+  var stage = document.getElementById('phoneStage'); if (!stage) return;
+  var te = 0; // último transitionend (transform) de um celular, em ms desde o carregamento
+  stage.addEventListener('transitionend', function(e){
+    if (e.propertyName === 'transform' && e.target.classList && e.target.classList.contains('phone-slide')) te = Math.round(performance.now());
+  });
+  // Contador de travadas: intervalo entre quadros (requestAnimationFrame) > 50 ms com a página rolando (scroll nos últimos 200 ms)
+  var lastScroll = -1e9, prev = 0, gaps = [], total = 0, since = performance.now();
+  addEventListener('scroll', function(){ lastScroll = performance.now(); }, {passive: true});
+  function loop(t){
+    if (prev && t - lastScroll < 200){ var dt = t - prev; gaps.push([t, dt]); if (dt > 50) total++; }
+    prev = t; requestAnimationFrame(loop);
+  }
+  requestAnimationFrame(loop);
+  var wrap = document.createElement('div');
+  wrap.id = 'case1DebugWrap';
+  wrap.style.cssText = 'position:fixed;left:8px;bottom:calc(8px + env(safe-area-inset-bottom,0px));z-index:60;max-width:min(60vw,250px);' +
+    'background:rgba(0,0,0,.78);color:#b9ffb0;font:10px/1.35 ui-monospace,Menlo,Consolas,monospace;border-radius:6px;padding:6px 8px;pointer-events:none';
+  var box = document.createElement('pre');
+  box.id = 'case1Debug';
+  box.style.cssText = 'margin:0;font:inherit;white-space:pre-wrap;word-break:break-all';
+  var btn = document.createElement('button');
+  btn.type = 'button'; btn.textContent = 'zerar';
+  btn.style.cssText = 'pointer-events:auto;margin-top:4px;font:inherit;color:#07040d;background:#b9ffb0;border:0;border-radius:4px;padding:3px 10px';
+  btn.addEventListener('click', function(){ gaps = []; total = 0; since = performance.now(); render(); });
+  wrap.appendChild(box); wrap.appendChild(btn);
+  document.body.appendChild(wrap);
+  function f(n){ return typeof n === 'number' ? n.toFixed(2) : String(n); }
+  function render(){
+    var slides = Array.prototype.slice.call(stage.querySelectorAll('.phone-slide'));
+    var real = slides.filter(function(s){ return !s.hasAttribute('aria-hidden'); }).length || 1;
+    var i = slides.findIndex(function(s){ return s.classList.contains('is-active'); });
+    var v = i >= 0 ? slides[i].querySelector('video') : null;
+    var d = window.__case1VideoDbg, now = Math.round(performance.now());
+    var L = ['slide ativo: ' + (i >= 0 ? (i % real) + 1 : '-') + '/' + real + (i >= real ? ' (cópia)' : '')];
+    if (v){
+      L.push('paused: ' + v.paused + '  readyState: ' + v.readyState + '  networkState: ' + v.networkState);
+      L.push('currentTime: ' + f(v.currentTime) + '  ' + v.videoWidth + '×' + v.videoHeight);
+      L.push('src: ' + ((v.currentSrc || '').split('/').pop() || '-'));
+      if ('webkitDisplayingFullscreen' in v) L.push('webkitDisplayingFullscreen: ' + v.webkitDisplayingFullscreen);
+    } else L.push(d ? 'vídeo: nenhum neste slide (imagem)' : 'vídeo: desativado (reduced-motion ou sem suporte)');
+    L.push('último erro: ' + ((d && d.err) || '-'));
+    L.push('visibility: ' + document.visibilityState);
+    L.push('transitionend: ' + (te ? te + ' ms (há ' + (now - te) + ' ms)' : '-'));
+    var cut = performance.now() - 10000, n10 = 0, max10 = 0;
+    gaps = gaps.filter(function(g){ return g[0] >= cut; });
+    gaps.forEach(function(g){ if (g[1] > 50) n10++; if (g[1] > max10) max10 = g[1]; });
+    var vids = Array.prototype.slice.call(stage.querySelectorAll('video'));
+    L.push('vídeos carregados: ' + vids.filter(function(x){ return x.readyState >= 2; }).length + '/' + vids.length + '  tocando: ' + vids.filter(function(x){ return !x.paused; }).length);
+    L.push('— rolagem —');
+    L.push('travadas 10 s: ' + n10 + '  maior: ' + Math.round(max10) + ' ms');
+    L.push('travadas desde zerar: ' + total + ' (' + Math.round((performance.now() - since) / 1000) + ' s)');
+    var keys = Object.keys(window.__perf || {}).filter(function(k){ return k !== 'all'; });
+    L.push('perf: ' + (keys.length ? keys.join(',') : 'nenhuma'));
+    box.textContent = L.join('\n');
+  }
+  render(); setInterval(render, 500);
+})();
+</script>
+</body>
+</html>
